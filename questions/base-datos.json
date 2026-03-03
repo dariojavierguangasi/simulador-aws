@@ -1,0 +1,245 @@
+{
+  "categoria": "Base de Datos",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué es Amazon RDS y cuál es su principal ventaja sobre gestionar bases de datos directamente en EC2?",
+      "opciones": [
+        "RDS es un servicio gestionado que automatiza tareas administrativas como backups, parches y escalado",
+        "RDS es más rápido que cualquier base de datos ejecutada en EC2",
+        "RDS solo soporta MySQL y PostgreSQL, lo que simplifica la administración",
+        "RDS proporciona acceso completo al sistema operativo subyacente para mayor control"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon RDS automatiza tareas administrativas costosas como aprovisionamiento de hardware, configuración de la base de datos, aplicación de parches y backups, permitiendo que los equipos se enfoquen en el desarrollo de aplicaciones en lugar de la administración de infraestructura."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué motores de base de datos relacionales soporta Amazon RDS?",
+      "opciones": [
+        "MySQL, PostgreSQL, Oracle, SQL Server, MariaDB y Amazon Aurora",
+        "Solo MySQL y PostgreSQL de código abierto",
+        "Solo Oracle y Microsoft SQL Server",
+        "MySQL, MongoDB, Cassandra y Redis"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon RDS soporta seis motores de bases de datos: Amazon Aurora, MySQL, MariaDB, PostgreSQL, Oracle y Microsoft SQL Server. Esto permite a las empresas usar el motor con el que ya están familiarizadas sin necesidad de refactorizar su aplicación."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué característica de Amazon RDS replica sincrónicamente los datos en otra zona de disponibilidad para garantizar alta disponibilidad?",
+      "opciones": [
+        "Multi-AZ Deployment",
+        "Read Replicas",
+        "Automated Backups",
+        "RDS Proxy"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El despliegue Multi-AZ de RDS mantiene una réplica sincrónica en una zona de disponibilidad secundaria. En caso de fallo de la instancia primaria, RDS realiza automáticamente un failover a la instancia en espera sin intervención manual, minimizando el tiempo de inactividad."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Para qué se usan las Read Replicas en Amazon RDS?",
+      "opciones": [
+        "Para escalar horizontalmente cargas de trabajo de lectura intensiva distribuyendo consultas",
+        "Para proporcionar alta disponibilidad automática en caso de fallo de la instancia principal",
+        "Para hacer backups automáticos diarios de la base de datos",
+        "Para cifrar los datos en tránsito entre la aplicación y la base de datos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Las Read Replicas son copias de solo lectura de la instancia principal que permiten distribuir la carga de consultas de lectura. Son útiles para aplicaciones con muchas consultas de lectura, liberando carga de la instancia principal. A diferencia de Multi-AZ, no proporcionan failover automático."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cuánto tiempo puede retener Amazon RDS los backups automatizados y qué capacidad de restauración ofrecen?",
+      "opciones": [
+        "De 1 a 35 días, permitiendo restauración a cualquier punto en el tiempo (Point-in-Time Recovery)",
+        "Máximo 7 días sin opción de restauración puntual",
+        "De 1 a 365 días con restauración solo al inicio de cada día",
+        "Solo 24 horas con snapshots cada hora"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon RDS permite configurar el período de retención de backups automatizados entre 1 y 35 días. Durante este período, se puede restaurar la base de datos a cualquier punto específico en el tiempo (Point-in-Time Recovery), lo que es invaluable para recuperarse de errores humanos o corrupción de datos."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué tipo de base de datos es Amazon DynamoDB y cuál es su principal característica?",
+      "opciones": [
+        "Base de datos NoSQL de clave-valor y documentos, totalmente gestionada y serverless",
+        "Base de datos relacional compatible con SQL estándar de alto rendimiento",
+        "Base de datos de series temporales optimizada para métricas y eventos",
+        "Base de datos en memoria para caché de alta velocidad con persistencia opcional"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon DynamoDB es una base de datos NoSQL totalmente gestionada que soporta modelos de datos de clave-valor y documentos. Es serverless, escala automáticamente y proporciona rendimiento de un solo dígito de milisegundos a cualquier escala, sin necesidad de gestionar servidores."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Qué latencia de lectura/escritura garantiza Amazon DynamoDB con tablas bien diseñadas?",
+      "opciones": [
+        "Latencia de un solo dígito de milisegundos (single-digit milliseconds) a cualquier escala",
+        "Latencia de microsegundos en todos los casos de uso",
+        "Latencia de menos de 100 milisegundos en condiciones normales",
+        "Latencia variable entre 1-10 segundos dependiendo del tamaño de los datos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "DynamoDB está diseñado para proporcionar latencias de lectura y escritura de un solo dígito de milisegundos a cualquier escala. Para latencias de microsegundos, se puede agregar DAX (DynamoDB Accelerator), que es una caché en memoria específicamente diseñada para DynamoDB."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Qué es Amazon DynamoDB Accelerator (DAX) y qué mejora proporciona?",
+      "opciones": [
+        "Una caché en memoria totalmente gestionada para DynamoDB que proporciona latencias de microsegundos en lecturas",
+        "Un servicio para exportar y analizar datos de DynamoDB en Amazon S3",
+        "Una función para crear índices globales secundarios de forma automática y optimizada",
+        "Una herramienta para migrar bases de datos relacionales a DynamoDB sin cambiar el código"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "DAX (DynamoDB Accelerator) es una caché en memoria totalmente gestionada y de alta disponibilidad para DynamoDB. Puede mejorar el rendimiento de lectura hasta 10 veces, proporcionando latencias de microsegundos, sin requerir cambios en el código de la aplicación existente."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Qué son las DynamoDB Global Tables y cuál es su caso de uso principal?",
+      "opciones": [
+        "Tablas replicadas automáticamente en múltiples regiones AWS para aplicaciones globales con baja latencia",
+        "Tablas con gran capacidad de almacenamiento para conjuntos de datos masivos de petabytes",
+        "Tablas compartidas entre múltiples cuentas AWS dentro de una organización",
+        "Tablas con esquema fijo y validación automática para garantizar la consistencia de datos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "DynamoDB Global Tables proporciona una solución totalmente gestionada de bases de datos multi-región y multi-activo. Las tablas se replican automáticamente en las regiones AWS seleccionadas, permitiendo que los usuarios globales accedan a datos con baja latencia desde la región más cercana."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Cuáles son los dos modos de capacidad disponibles en Amazon DynamoDB y cuándo usar cada uno?",
+      "opciones": [
+        "On-Demand (pago por solicitud, para tráfico impredecible) y Provisioned (capacidad fija, para tráfico predecible)",
+        "Standard (costo fijo mensual) y Premium (pago por uso con mayor rendimiento)",
+        "Serverless (sin servidores, automático) y Dedicated (hardware dedicado para mayor aislamiento)",
+        "Read-Optimized (optimizado para lectura) y Write-Optimized (optimizado para escritura)"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "DynamoDB ofrece dos modos: On-Demand, donde se paga por solicitud sin necesidad de planificar capacidad (ideal para tráfico impredecible o nuevas aplicaciones), y Provisioned, donde se especifican las unidades de capacidad de lectura/escritura anticipadamente (ideal para tráfico predecible con menores costos)."
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Qué es Amazon Aurora y con qué motores de bases de datos es compatible?",
+      "opciones": [
+        "Un motor de base de datos relacional de AWS, totalmente gestionado y compatible con MySQL y PostgreSQL",
+        "Una base de datos NoSQL compatible con MongoDB y Apache Cassandra",
+        "Un servicio de caché en memoria compatible con Redis y Memcached",
+        "Una base de datos de grafos compatible con Neo4j para relaciones complejas"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon Aurora es un motor de base de datos relacional diseñado por AWS que es totalmente compatible con MySQL y PostgreSQL. Combina la velocidad y disponibilidad de bases de datos comerciales con la simplicidad y rentabilidad de bases de datos de código abierto."
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Cuánto más rápido es Amazon Aurora comparado con MySQL estándar según AWS?",
+      "opciones": [
+        "Hasta 5 veces más rápido que MySQL estándar y hasta 3 veces que PostgreSQL estándar",
+        "Hasta 2 veces más rápido con alta disponibilidad garantizada",
+        "La misma velocidad que MySQL pero con mayor disponibilidad y durabilidad",
+        "Hasta 10 veces más rápido para todas las consultas sin excepción"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon Aurora proporciona hasta 5 veces el rendimiento de MySQL estándar y hasta 3 veces el de PostgreSQL estándar. Esto se logra gracias a la arquitectura de almacenamiento distribuido optimizada de Aurora que separa el cómputo del almacenamiento y utiliza un sistema de registro distribuido."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Hasta qué capacidad escala automáticamente el almacenamiento de Amazon Aurora?",
+      "opciones": [
+        "Hasta 128 TB automáticamente en incrementos de 10 GB sin tiempo de inactividad",
+        "Hasta 16 TB con aprovisionamiento manual y planificación previa",
+        "Hasta 64 TB con escalado automático que ocurre cada 24 horas",
+        "Almacenamiento ilimitado sin ningún límite ni configuración adicional"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El almacenamiento de Aurora escala automáticamente desde 10 GB hasta 128 TB en incrementos de 10 GB, sin tiempo de inactividad ni impacto en el rendimiento. No es necesario aprovisionar almacenamiento por adelantado ni gestionar el crecimiento de la base de datos."
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Qué es Aurora Serverless y cuándo es más adecuado utilizarlo?",
+      "opciones": [
+        "Una configuración de Aurora que escala automáticamente la capacidad según la carga, ideal para cargas de trabajo intermitentes o impredecibles",
+        "Aurora configurado sin cifrado de datos para entornos de desarrollo y pruebas",
+        "Aurora sin réplicas de lectura para reducir costos en aplicaciones de solo escritura",
+        "Aurora optimizado para lecturas masivas con múltiples instancias de escritura activas simultáneamente"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Aurora Serverless inicia, escala y detiene automáticamente la capacidad de la base de datos según las necesidades de la aplicación. Es ideal para aplicaciones con cargas de trabajo variables, intermitentes o impredecibles, y también para bases de datos de desarrollo y prueba, ya que solo pagas por la capacidad que consumes."
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Cuántas réplicas de lectura soporta Amazon Aurora en una región y qué latencia de replicación ofrece?",
+      "opciones": [
+        "Hasta 15 réplicas de lectura con latencia de replicación típicamente menor a 10 milisegundos",
+        "Hasta 5 réplicas de lectura con latencia similar a RDS estándar",
+        "Solo 1 réplica de lectura por región para mantener la consistencia",
+        "Hasta 10 réplicas con latencia de replicación de hasta 1 segundo"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon Aurora puede tener hasta 15 réplicas de lectura en la misma región, con una latencia de replicación típicamente menor a 10 ms. Esto es significativamente mejor que RDS estándar y permite distribuir grandes cargas de lectura mientras se mantiene la instancia principal para escrituras."
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Cuándo es más apropiado usar una base de datos relacional (SQL) en lugar de una NoSQL?",
+      "opciones": [
+        "Cuando se necesitan transacciones ACID complejas, consultas ad-hoc flexibles y datos con relaciones bien definidas",
+        "Cuando se necesita alta escalabilidad horizontal masiva con millones de solicitudes por segundo",
+        "Cuando los datos son documentos JSON sin estructura predefinida ni relaciones",
+        "Cuando el volumen de datos supera 1 TB y el esquema cambia frecuentemente"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Las bases de datos relacionales son ideales cuando se necesitan transacciones ACID, consultas SQL complejas con JOINs, datos con relaciones bien definidas y esquemas estructurados. Son perfectas para sistemas financieros, ERP, CRM y aplicaciones donde la integridad de los datos es crítica."
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Qué significan las propiedades ACID en el contexto de bases de datos relacionales?",
+      "opciones": [
+        "Atomicidad, Consistencia, Aislamiento y Durabilidad: garantías de integridad de las transacciones",
+        "Automatización, Cifrado, Integración y Disponibilidad: características de bases de datos en la nube",
+        "Acceso, Control, Integridad y Distribución: propiedades de seguridad de bases de datos",
+        "Autenticación, Confidencialidad, Integridad y Descubrimiento: estándares de seguridad de datos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "ACID define propiedades fundamentales de transacciones: Atomicidad (la transacción completa o falla completamente), Consistencia (los datos siempre permanecen en un estado válido), Aislamiento (las transacciones concurrentes no interfieren entre sí) y Durabilidad (los cambios comprometidos persisten permanentemente incluso ante fallos)."
+    },
+    {
+      "id": 18,
+      "pregunta": "¿Cómo escalan típicamente las bases de datos relacionales (SQL) comparado con las NoSQL?",
+      "opciones": [
+        "SQL escala verticalmente (más potencia al servidor existente); NoSQL escala horizontalmente (más servidores en paralelo)",
+        "SQL escala horizontalmente de forma nativa; NoSQL escala solo verticalmente",
+        "Ambas escalan de la misma manera mediante sharding automático integrado",
+        "SQL no puede escalar más allá de ciertos límites; NoSQL escala de ambas formas sin restricciones"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Las bases de datos relacionales típicamente escalan verticalmente (aumentando CPU, RAM y almacenamiento del servidor único), lo que tiene límites físicos y costos elevados. Las bases de datos NoSQL están diseñadas para escalar horizontalmente distribuyendo datos entre múltiples servidores (sharding), permitiendo manejar volúmenes masivos de datos."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿En qué escenario sería más apropiado usar DynamoDB en lugar de Amazon RDS?",
+      "opciones": [
+        "Una aplicación de juegos que necesita almacenar perfiles de millones de usuarios con acceso de baja latencia y esquema variable",
+        "Un sistema de contabilidad financiera con transacciones complejas multi-tabla y reportes analíticos",
+        "Una aplicación ERP con relaciones complejas entre módulos de inventario, órdenes y clientes",
+        "Un sistema bancario que requiere consultas SQL complejas con múltiples JOINs y transacciones ACID"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "DynamoDB es ideal para aplicaciones que requieren baja latencia a escala masiva con esquemas flexibles, como juegos, aplicaciones móviles, IoT y catálogos de productos. La aplicación de juegos con millones de usuarios necesita exactamente esas características: escalabilidad automática, baja latencia y esquema flexible para diferentes tipos de perfiles."
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Qué ventaja ofrece el esquema flexible (schema-less) de las bases de datos NoSQL como DynamoDB?",
+      "opciones": [
+        "Permite agregar o modificar atributos en los datos sin alterar una estructura de tabla predefinida, agilizando el desarrollo",
+        "Garantiza mayor integridad referencial de datos que las bases de datos con esquema rígido",
+        "Permite ejecutar consultas SQL estándar sin necesidad de definir relaciones entre entidades",
+        "Proporciona mejor rendimiento en consultas analíticas complejas con múltiples agregaciones"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El esquema flexible de NoSQL permite que diferentes ítems en la misma tabla tengan diferentes atributos. Esto facilita el desarrollo ágil ya que no requiere migraciones de esquema costosas cuando cambian los requisitos de datos, y permite almacenar datos heterogéneos eficientemente en la misma tabla."
+    }
+  ]
+}

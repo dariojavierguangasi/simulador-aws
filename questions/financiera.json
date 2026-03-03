@@ -1,0 +1,125 @@
+{
+  "categoria": "Gestión Financiera",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué es AWS Cost Explorer y qué permite hacer?",
+      "opciones": [
+        "Una herramienta que visualiza, comprende y gestiona los costos y el uso de AWS a lo largo del tiempo con gráficos interactivos",
+        "Una calculadora de precios para estimar el costo de nuevos proyectos antes de comenzar a usar AWS",
+        "Un servicio que negocia automáticamente descuentos con AWS basándose en el volumen de uso histórico",
+        "Un panel de control de facturación que muestra solo el costo total mensual de la cuenta AWS"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Cost Explorer es una herramienta de visualización de costos que permite analizar el gasto en AWS con gráficos e informes interactivos. Permite filtrar y agrupar datos por servicio, región, cuenta, etiqueta y más. También puede generar previsiones de costos futuros basadas en el historial de uso de hasta 12 meses pasados."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Para qué sirve la función de forecasting (previsión) en AWS Cost Explorer?",
+      "opciones": [
+        "Para proyectar los costos futuros de AWS basándose en patrones de uso histórico, ayudando a planificar presupuestos",
+        "Para calcular el costo exacto de recursos AWS que se planean crear en el futuro",
+        "Para identificar automáticamente los recursos más costosos y sugerir alternativas más económicas",
+        "Para comparar los costos actuales con los precios de otros proveedores de nube como Azure y GCP"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La función de forecasting de Cost Explorer analiza el historial de uso y gasto de los últimos meses para proyectar los costos futuros con un intervalo de confianza. Esto es muy útil para la planificación presupuestaria, permitiendo a los equipos financieros anticipar el gasto en AWS con mayor precisión."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué recomendaciones de ahorro puede proporcionar AWS Cost Explorer?",
+      "opciones": [
+        "Recomendaciones de Reserved Instances y Savings Plans basadas en el historial de uso para reducir costos de EC2, RDS y otros servicios",
+        "Sugerencias para eliminar todos los recursos con bajo uso sin importar si siguen siendo necesarios",
+        "Recomendaciones para migrar toda la infraestructura a instancias Spot para máximo ahorro",
+        "Consejos para reducir el tamaño de los buckets S3 comprimiendo y eliminando datos duplicados"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Cost Explorer analiza los patrones de uso histórico y genera recomendaciones específicas de Reserved Instances y Savings Plans que podrían generar ahorros significativos. Las recomendaciones incluyen el tipo y término de reserva sugerido, el ahorro estimado y el costo de adquisición, facilitando la toma de decisiones de compromiso de uso."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cómo ayudan las etiquetas (tags) de recursos en AWS Cost Explorer?",
+      "opciones": [
+        "Permiten asignar costos a proyectos, departamentos o equipos específicos para un análisis detallado de gasto por categoría",
+        "Automáticamente reducen los costos de los recursos etiquetados correctamente según las políticas de AWS",
+        "Permiten recibir descuentos adicionales por volumen cuando todos los recursos están correctamente etiquetados",
+        "Sincronizan automáticamente los costos con sistemas de contabilidad externos como SAP o Oracle"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Las etiquetas de recursos son metadatos de clave-valor que se pueden asignar a casi cualquier recurso AWS. En Cost Explorer, se pueden activar como Cost Allocation Tags y luego filtrar y agrupar los costos por estas etiquetas. Por ejemplo, etiquetar recursos con 'Proyecto:MigracionERP' o 'Departamento:Ventas' para ver exactamente cuánto gasta cada proyecto o departamento."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cuánto historial de datos de costos puede analizar AWS Cost Explorer?",
+      "opciones": [
+        "Hasta 13 meses de datos históricos de costos y uso",
+        "Solo los últimos 3 meses de datos de facturación",
+        "Historial ilimitado desde la creación de la cuenta AWS",
+        "Solo el mes actual y el mes anterior"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Cost Explorer permite visualizar y analizar hasta 13 meses de datos históricos de costos y uso. Esto proporciona suficiente perspectiva para identificar tendencias estacionales, comparar costos año sobre año y basar las recomendaciones de Reserved Instances en un historial representativo del uso."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué es AWS Budgets y cuál es su función principal?",
+      "opciones": [
+        "Un servicio que permite crear presupuestos personalizados y recibir alertas cuando los costos o el uso superan los umbrales definidos",
+        "Un servicio que limita automáticamente el gasto de la cuenta AWS desactivando recursos cuando se alcanza el presupuesto",
+        "Una herramienta para negociar descuentos con AWS basándose en compromisos de gasto anual",
+        "Un panel de facturación que muestra el desglose de costos por servicio en tiempo real"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Budgets permite establecer presupuestos personalizados para monitorear costos, uso y cobertura de Reserved Instances o Savings Plans. Se pueden configurar alertas por email o SNS cuando el gasto real o previsto supera un porcentaje del presupuesto, permitiendo tomar acciones proactivas antes de exceder el presupuesto."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Qué tipos de presupuestos se pueden crear en AWS Budgets?",
+      "opciones": [
+        "Presupuestos de costo, de uso, de Reserved Instances y de Savings Plans",
+        "Solo presupuestos de costo total mensual sin posibilidad de filtrar por servicio",
+        "Presupuestos solo por región AWS o por cuenta individual",
+        "Únicamente presupuestos anuales con distribución mensual automática uniforme"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Budgets permite crear cuatro tipos de presupuestos: Presupuestos de Costo (monitorear el gasto total o por servicio/región), Presupuestos de Uso (monitorear la cantidad de recursos utilizados), Presupuestos de Reserved Instances (monitorear la cobertura y utilización de reservas) y Presupuestos de Savings Plans (monitorear la cobertura y utilización de planes de ahorro)."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Qué son las Budget Actions en AWS Budgets?",
+      "opciones": [
+        "Acciones automáticas que se ejecutan cuando se supera un umbral de presupuesto, como aplicar políticas IAM restrictivas o detener instancias EC2",
+        "Notificaciones automáticas que se envían al equipo de finanzas cuando el presupuesto se excede",
+        "Procesos de aprobación que requieren autorización del management antes de provisionar recursos costosos",
+        "Scripts personalizados que el usuario puede ejecutar manualmente cuando se detecta una alerta de presupuesto"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Budget Actions permite configurar respuestas automáticas cuando un umbral de presupuesto se supera. Las acciones posibles incluyen: aplicar una política IAM para restringir el aprovisionamiento de nuevos recursos, adjuntar una SCP en AWS Organizations para bloquear acciones específicas, o detener instancias EC2 y RDS. Esto permite un control automático del gasto."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Cómo se configuran las alertas en AWS Budgets y cuándo se activan?",
+      "opciones": [
+        "Se configuran umbrales porcentuales del presupuesto (ej: 80%, 100%) y se activan cuando el costo real o previsto supera ese porcentaje",
+        "Las alertas solo se activan cuando el gasto supera exactamente el 100% del presupuesto definido",
+        "Se activan únicamente al final de cada mes cuando se conoce el costo total exacto",
+        "Las alertas son fijas en 50%, 75% y 100% del presupuesto sin posibilidad de personalización"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "En AWS Budgets se pueden configurar múltiples umbrales de alerta para un mismo presupuesto. Por ejemplo: alertar al 50% del presupuesto (gasto real), al 80% (gasto previsto) y al 100% (gasto real). Las alertas pueden enviarse por email a hasta 10 destinatarios o mediante un tema SNS para integración con otros sistemas."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Cuál es la diferencia principal entre AWS Cost Explorer y AWS Budgets?",
+      "opciones": [
+        "Cost Explorer analiza y visualiza costos históricos y proyecciones; Budgets establece límites y alertas proactivas sobre el gasto futuro",
+        "Cost Explorer es para cuentas individuales; Budgets solo funciona con AWS Organizations",
+        "Budgets es gratuito; Cost Explorer tiene un costo por cada consulta realizada",
+        "Cost Explorer incluye recomendaciones de seguridad; Budgets se enfoca solo en costos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Son servicios complementarios: Cost Explorer es una herramienta de análisis retrospectivo y predictivo que visualiza el gasto histórico, identifica tendencias y genera recomendaciones de ahorro. AWS Budgets es una herramienta de control proactivo que establece límites de gasto y envía alertas cuando se aproximan o superan esos límites, permitiendo actuar antes de que el gasto se salga de control."
+    }
+  ]
+}

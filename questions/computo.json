@@ -1,0 +1,185 @@
+{
+  "categoria": "Cómputo",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué tipo de instancia EC2 es más adecuado para cargas de trabajo con uso intensivo de memoria como bases de datos en memoria?",
+      "opciones": [
+        "Instancias optimizadas para memoria (R)",
+        "Instancias de propósito general (T)",
+        "Instancias optimizadas para cómputo (C)",
+        "Instancias optimizadas para almacenamiento (I)"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Las instancias optimizadas para memoria (familia R) están diseñadas para cargas de trabajo que procesan grandes conjuntos de datos en memoria, como bases de datos en memoria (Redis, Memcached) y análisis de big data en tiempo real."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué modelo de precios de EC2 ofrece el mayor descuento a cambio de un compromiso de uso de 1 a 3 años?",
+      "opciones": [
+        "Reserved Instances",
+        "On-Demand Instances",
+        "Spot Instances",
+        "Dedicated Hosts"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Las Reserved Instances ofrecen descuentos de hasta 75% comparado con los precios On-Demand a cambio de un compromiso de uso de 1 a 3 años. Son ideales para cargas de trabajo predecibles y continuas."
+    },
+    {
+      "id": 3,
+      "pregunta": "Una empresa necesita ejecutar un servidor web que maneje tráfico variable durante el día. ¿Qué característica de EC2 permite ajustar automáticamente la capacidad?",
+      "opciones": [
+        "AWS Auto Scaling",
+        "Elastic Load Balancing",
+        "Amazon CloudFront",
+        "AWS Lambda"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Auto Scaling permite aumentar o disminuir automáticamente el número de instancias EC2 basándose en la demanda del tráfico, optimizando costos y rendimiento."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cuál es la diferencia principal entre una AMI (Amazon Machine Image) y una instancia EC2?",
+      "opciones": [
+        "Una AMI es una plantilla para crear instancias; una instancia EC2 es un servidor virtual en ejecución",
+        "Una AMI es un servidor virtual activo; una instancia EC2 es una imagen de respaldo",
+        "Una AMI solo se usa para Windows; EC2 solo para Linux",
+        "No hay diferencia, son el mismo recurso"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Una AMI (Amazon Machine Image) es una plantilla que contiene la configuración del software necesaria para crear una instancia EC2. La instancia EC2 es el servidor virtual que se ejecuta a partir de esa plantilla."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué opción de EC2 permite ejecutar instancias en hardware físico dedicado exclusivamente para un cliente, cumpliendo requisitos de cumplimiento normativo?",
+      "opciones": [
+        "Dedicated Hosts",
+        "Reserved Instances",
+        "Spot Instances",
+        "On-Demand Instances"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Los Dedicated Hosts son servidores físicos dedicados exclusivamente para un cliente. Esto ayuda a cumplir requisitos de cumplimiento normativo que exigen que los servidores no sean compartidos con otras organizaciones."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Cuál es el modelo de ejecución de AWS Lambda?",
+      "opciones": [
+        "Serverless - se ejecuta código sin gestionar servidores",
+        "Se requiere aprovisionar y gestionar servidores EC2",
+        "Requiere un contenedor Docker siempre activo",
+        "Necesita una VPC dedicada para funcionar"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Lambda es un servicio serverless que ejecuta código en respuesta a eventos sin necesidad de aprovisionar o gestionar servidores. Solo se paga por el tiempo de cómputo consumido."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Cuál es el tiempo máximo de ejecución permitido para una función AWS Lambda?",
+      "opciones": [
+        "15 minutos",
+        "1 hora",
+        "5 minutos",
+        "30 minutos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El tiempo máximo de ejecución (timeout) para una función AWS Lambda es de 15 minutos (900 segundos). Para procesos que requieren más tiempo, se deben usar otras soluciones como AWS Step Functions o EC2."
+    },
+    {
+      "id": 8,
+      "pregunta": "Una empresa quiere procesar automáticamente imágenes subidas a S3. ¿Qué servicio es más adecuado para ejecutar código de procesamiento sin gestionar servidores?",
+      "opciones": [
+        "AWS Lambda",
+        "Amazon EC2",
+        "AWS Elastic Beanstalk",
+        "Amazon ECS"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Lambda es ideal para este caso de uso. Puede ser configurado para ejecutarse automáticamente cuando se sube un objeto a S3, procesando la imagen sin necesidad de gestionar ningún servidor."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Cuál es el modelo de precios de AWS Lambda?",
+      "opciones": [
+        "Se cobra por número de solicitudes y duración de ejecución",
+        "Se cobra por hora de servidor aprovisionado",
+        "Se cobra por instancia reservada mensualmente",
+        "Se cobra por el tamaño de la imagen del contenedor"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Lambda cobra basándose en dos factores: el número de solicitudes (invocaciones) y la duración de ejecución medida en GB-segundos. El nivel gratuito incluye 1 millón de solicitudes y 400,000 GB-segundos por mes."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué lenguajes de programación admite AWS Lambda de forma nativa?",
+      "opciones": [
+        "Python, Node.js, Java, C#, Go, Ruby, entre otros",
+        "Solo Python y Node.js",
+        "Solo Java y C#",
+        "Solo lenguajes compilados como C++ y Rust"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Lambda admite de forma nativa múltiples lenguajes incluyendo Python, Node.js, Java, C#/.NET, Go, Ruby y PowerShell. También permite usar runtimes personalizados para otros lenguajes."
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Qué es AWS Elastic Beanstalk?",
+      "opciones": [
+        "Un servicio PaaS que despliega y gestiona automáticamente aplicaciones web",
+        "Un servicio de base de datos gestionada",
+        "Un servicio de almacenamiento de objetos",
+        "Un servicio de red virtual privada"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Elastic Beanstalk es un servicio Platform as a Service (PaaS) que permite desplegar y gestionar aplicaciones web fácilmente. Se encarga automáticamente del aprovisionamiento de capacidad, balanceo de carga, escalado y monitoreo."
+    },
+    {
+      "id": 12,
+      "pregunta": "Al usar Elastic Beanstalk, ¿el usuario paga por el servicio adicional?",
+      "opciones": [
+        "No, solo se paga por los recursos AWS subyacentes que utiliza la aplicación",
+        "Sí, hay un costo adicional por hora de uso de Elastic Beanstalk",
+        "Sí, hay una tarifa mensual fija por entorno",
+        "No, Elastic Beanstalk es completamente gratuito incluyendo los recursos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Elastic Beanstalk no tiene costo adicional. Solo se pagan los recursos AWS subyacentes que utiliza la aplicación, como instancias EC2, balanceadores de carga y bases de datos RDS."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Qué plataformas admite AWS Elastic Beanstalk para desplegar aplicaciones?",
+      "opciones": [
+        "Java, .NET, PHP, Node.js, Python, Ruby, Go y Docker",
+        "Solo aplicaciones Java y .NET",
+        "Solo contenedores Docker",
+        "Solo aplicaciones Node.js y Python"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Elastic Beanstalk soporta múltiples plataformas y lenguajes: Java, .NET, PHP, Node.js, Python, Ruby, Go y Docker. Esto permite a los desarrolladores usar su lenguaje preferido sin cambiar de plataforma."
+    },
+    {
+      "id": 14,
+      "pregunta": "Una startup quiere desplegar su primera aplicación web en AWS con el mínimo conocimiento de infraestructura. ¿Qué servicio recomendarías?",
+      "opciones": [
+        "AWS Elastic Beanstalk",
+        "Amazon EC2 con configuración manual",
+        "AWS CloudFormation",
+        "Amazon ECS con Kubernetes"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Elastic Beanstalk es ideal para equipos que quieren enfocarse en el código sin gestionar la infraestructura. Solo necesitan subir su código y Elastic Beanstalk maneja automáticamente el despliegue, escalado y monitoreo."
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Cuál es la diferencia principal entre Elastic Beanstalk y AWS Lambda?",
+      "opciones": [
+        "Elastic Beanstalk gestiona aplicaciones web completas; Lambda ejecuta funciones individuales en respuesta a eventos",
+        "Elastic Beanstalk es más barato que Lambda",
+        "Lambda puede manejar aplicaciones web completas mejor que Elastic Beanstalk",
+        "No hay diferencia, son servicios equivalentes"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Elastic Beanstalk está diseñado para desplegar y gestionar aplicaciones web completas con servidores que están siempre activos. Lambda es para ejecutar funciones cortas y específicas en respuesta a eventos, sin gestionar servidores."
+    }
+  ]
+}
