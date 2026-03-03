@@ -168,6 +168,12 @@ function showQuestion() {
   const total = state.questions.length;
   const idx = state.currentIndex;
 
+  // Barajar orden de opciones para que la correcta no sea siempre la primera (más realista para examen)
+  const indices = shuffle(q.opciones.map((_, i) => i));
+  const opcionesOriginales = q.opciones.slice();
+  q.opciones = indices.map(i => opcionesOriginales[i]);
+  q.respuestaCorrecta = indices.indexOf(q.respuestaCorrecta);
+
   // Contador y barra de progreso
   questionCounter.textContent = `Pregunta ${idx + 1} / ${total}`;
   progressFill.style.width = `${((idx) / total) * 100}%`;
@@ -221,14 +227,12 @@ function getCategoryLabel(mode, category) {
 // ─── Selección de opción ──────────────────────────────────────────────────────
 
 function selectOption(index) {
-  // No permitir cambio si ya se verificó
-  if (!verifyBtn.classList.contains('hidden') && !verifyBtn.disabled) {
-    // Quitar selección previa
-    document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-    state.selectedOption = index;
-    document.querySelector(`.option-btn[data-index="${index}"]`).classList.add('selected');
-    verifyBtn.disabled = false;
-  }
+  // Permitir selección solo mientras no se haya verificado (el botón Verificar sigue visible)
+  if (verifyBtn.classList.contains('hidden')) return;
+  document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+  state.selectedOption = index;
+  document.querySelector(`.option-btn[data-index="${index}"]`).classList.add('selected');
+  verifyBtn.disabled = false;
 }
 
 // ─── Verificación de respuesta ────────────────────────────────────────────────

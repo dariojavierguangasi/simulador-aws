@@ -46,16 +46,13 @@ simulador-aws/
 
 ## 🛠️ Instrucciones de Uso
 
-### Opción 1: Abrir directamente en el navegador
-Clona el repositorio y abre `index.html` en cualquier navegador moderno:
-
+### Opción 1: Clonar el repositorio
 ```bash
 git clone https://github.com/dariojavierguangasi/simulador-aws.git
 cd simulador-aws
-# Abre index.html en tu navegador
 ```
 
-> **Nota:** Como el simulador carga archivos JSON mediante `fetch()`, necesitas servirlo desde un servidor HTTP local (no funciona con `file://` en todos los navegadores).
+> **Importante:** No abras `index.html` directamente (doble clic o `file://`). El navegador bloqueará la carga de los JSON por CORS. **Usa siempre un servidor local** (Opción 2 o 3).
 
 ### Opción 2: Servidor local con Python
 ```bash
