@@ -1,0 +1,185 @@
+{
+  "categoria": "Conceptos Fundamentales",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué es el Modelo de Responsabilidad Compartida de AWS?",
+      "opciones": [
+        "Un modelo que divide las responsabilidades de seguridad entre AWS (seguridad DE la nube) y el cliente (seguridad EN la nube)",
+        "Un acuerdo contractual donde AWS y el cliente comparten los costos de infraestructura de forma equitativa",
+        "Un modelo de gobernanza donde AWS y el cliente toman decisiones conjuntas sobre la arquitectura",
+        "Un programa donde AWS proporciona soporte técnico compartido entre múltiples clientes"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El Modelo de Responsabilidad Compartida define claramente qué partes de la seguridad gestiona AWS y cuáles gestiona el cliente. AWS es responsable de la seguridad 'de' la nube (infraestructura física, hardware, hipervisores, servicios gestionados). El cliente es responsable de la seguridad 'en' la nube (datos, control de acceso, sistema operativo, configuración de aplicaciones)."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿De qué es responsable AWS en el Modelo de Responsabilidad Compartida?",
+      "opciones": [
+        "La seguridad de la infraestructura física: centros de datos, hardware, redes, virtualización e hipervisores",
+        "El cifrado de los datos de los clientes almacenados en servicios como S3 y RDS",
+        "La configuración de los sistemas operativos en las instancias EC2 de los clientes",
+        "La gestión de usuarios y contraseñas en las aplicaciones de los clientes"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS gestiona la seguridad de la infraestructura que ejecuta todos los servicios en la nube de AWS: instalaciones físicas de centros de datos (acceso físico, cámaras, guardias), hardware de servidores, red global, hipervisores y la capa de virtualización. Para servicios gestionados como RDS o DynamoDB, AWS también gestiona el sistema operativo y los parches del motor de base de datos."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿De qué es responsable el cliente en el Modelo de Responsabilidad Compartida al usar Amazon EC2?",
+      "opciones": [
+        "El sistema operativo (parches y actualizaciones), aplicaciones instaladas, datos almacenados, configuración de red y gestión de acceso IAM",
+        "Solo los datos almacenados en la instancia; AWS gestiona el resto incluyendo el sistema operativo",
+        "Únicamente la configuración de Security Groups; AWS gestiona el sistema operativo y las aplicaciones",
+        "El cliente no tiene ninguna responsabilidad de seguridad al usar servicios gestionados de AWS"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Al usar EC2, el cliente es responsable de: aplicar parches y actualizar el sistema operativo guest, instalar y mantener las aplicaciones, cifrar los datos sensibles, configurar correctamente los Security Groups y NACLs, gestionar las claves SSH y credenciales de acceso, y proteger los datos almacenados en volúmenes EBS."
+    },
+    {
+      "id": 4,
+      "pregunta": "En el Modelo de Responsabilidad Compartida, ¿quién es responsable de gestionar el sistema operativo cuando se usa Amazon RDS?",
+      "opciones": [
+        "AWS gestiona el sistema operativo y los parches del motor de base de datos en RDS; el cliente gestiona los datos y el acceso",
+        "El cliente debe aplicar manualmente los parches del sistema operativo en RDS igual que en EC2",
+        "Ambos comparten la responsabilidad de aplicar parches al sistema operativo en RDS",
+        "El cliente es responsable del sistema operativo solo si usa RDS con Oracle o SQL Server"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "RDS es un servicio gestionado, lo que significa que AWS asume más responsabilidades. AWS gestiona el sistema operativo subyacente, los parches del motor de base de datos, las copias de seguridad automáticas y la replicación Multi-AZ. El cliente es responsable de los datos almacenados, la gestión de usuarios de la base de datos y la configuración de acceso de red."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Quién es siempre responsable de los datos del cliente según el Modelo de Responsabilidad Compartida, independientemente del servicio AWS usado?",
+      "opciones": [
+        "El cliente siempre es responsable de sus propios datos: clasificación, cifrado, gestión de acceso y cumplimiento normativo",
+        "AWS es responsable de los datos cuando se almacenan en servicios gestionados como S3 y RDS",
+        "La responsabilidad de los datos se comparte equitativamente entre AWS y el cliente en todos los casos",
+        "Depende del tipo de servicio: en IaaS el cliente, en SaaS y PaaS AWS asume la responsabilidad de datos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "En todos los modelos de servicio (IaaS, PaaS, SaaS), el cliente siempre retiene la responsabilidad sobre sus datos. Esto incluye: decidir qué datos almacenar en AWS, clasificar los datos por sensibilidad, implementar cifrado apropiado, gestionar quién tiene acceso a los datos y garantizar el cumplimiento normativo aplicable a esos datos."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué es el AWS Well-Architected Framework?",
+      "opciones": [
+        "Un conjunto de mejores prácticas y principios de diseño para construir infraestructuras seguras, eficientes, resilientes y de alto rendimiento en AWS",
+        "Una certificación oficial de AWS que valida que una arquitectura cumple con los estándares de la industria",
+        "Un servicio de AWS que analiza automáticamente la arquitectura y aplica correcciones de configuración",
+        "Una metodología de gestión de proyectos para implementar migraciones a la nube de forma estructurada"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El AWS Well-Architected Framework proporciona orientación para diseñar y operar sistemas en la nube de forma confiable, segura, eficiente y rentable. Está basado en seis pilares y la experiencia de miles de revisiones de arquitecturas de clientes. AWS también ofrece la herramienta Well-Architected Tool para evaluar arquitecturas frente a estos principios."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Cuáles son los seis pilares del AWS Well-Architected Framework?",
+      "opciones": [
+        "Excelencia Operacional, Seguridad, Confiabilidad, Eficiencia del Rendimiento, Optimización de Costos y Sostenibilidad",
+        "Disponibilidad, Escalabilidad, Seguridad, Rendimiento, Costos y Mantenibilidad",
+        "Automatización, Cifrado, Redundancia, Monitoreo, Optimización y Cumplimiento",
+        "Infraestructura, Aplicaciones, Datos, Red, Seguridad y Gobernanza"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El Well-Architected Framework tiene seis pilares: Excelencia Operacional (operar y mejorar procesos continuamente), Seguridad (proteger información y sistemas), Confiabilidad (recuperarse de fallos y cumplir demandas), Eficiencia del Rendimiento (usar recursos eficientemente), Optimización de Costos (evitar gastos innecesarios) y Sostenibilidad (minimizar impacto ambiental)."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Qué pilar del Well-Architected Framework se enfoca en proteger la información, los sistemas y los activos?",
+      "opciones": [
+        "El pilar de Seguridad, que cubre IAM, detección, protección de infraestructura, protección de datos y respuesta a incidentes",
+        "El pilar de Confiabilidad, que garantiza que los sistemas estén siempre disponibles y protegidos",
+        "El pilar de Excelencia Operacional, que incluye la gestión de configuración y parches de seguridad",
+        "El pilar de Sostenibilidad, que protege los recursos de la empresa a largo plazo"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El pilar de Seguridad se enfoca en proteger datos, sistemas y activos. Incluye áreas de diseño: gestión de identidad y acceso (IAM), controles de detección (CloudTrail, GuardDuty), protección de infraestructura (VPC, Security Groups, WAF), protección de datos (KMS, cifrado en reposo y en tránsito) y respuesta a incidentes de seguridad."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Qué pilar del Well-Architected Framework se enfoca en la capacidad de recuperarse de interrupciones y cumplir con la demanda?",
+      "opciones": [
+        "El pilar de Confiabilidad, que incluye recuperación ante desastres, redundancia, tolerancia a fallos y escalado automático",
+        "El pilar de Excelencia Operacional, que cubre los procedimientos operativos y la respuesta a incidentes",
+        "El pilar de Eficiencia del Rendimiento, que garantiza que los recursos siempre estén disponibles",
+        "El pilar de Seguridad, que protege los sistemas de interrupciones causadas por ataques externos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El pilar de Confiabilidad se enfoca en garantizar que los sistemas funcionen correctamente y se recuperen de fallos. Incluye: fundamentos (gestión de cuotas de servicio), arquitectura de cargas de trabajo (distribución entre AZs, Auto Scaling), gestión de cambios y gestión de fallos (copias de seguridad, recuperación ante desastres, pruebas de resiliencia)."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué es el pilar de Sostenibilidad en el AWS Well-Architected Framework?",
+      "opciones": [
+        "Un pilar que se enfoca en minimizar el impacto ambiental de las cargas de trabajo en la nube mediante el uso eficiente de recursos",
+        "Un pilar que garantiza la sostenibilidad financiera del negocio mediante la optimización de costos a largo plazo",
+        "Un pilar que asegura que las aplicaciones puedan operar de forma continua durante años sin mantenimiento",
+        "Un pilar que establece prácticas para mantener la sostenibilidad del código fuente a lo largo del tiempo"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El pilar de Sostenibilidad (añadido en 2021) se centra en minimizar el impacto ambiental de las cargas de trabajo en la nube. Incluye prácticas como: right-sizing de instancias para usar solo los recursos necesarios, usar instancias gestionadas para mayor eficiencia, maximizar el uso de recursos aprovisionados y adoptar nuevas arquitecturas más eficientes energéticamente."
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Cuál es el modelo de precios fundamental de AWS?",
+      "opciones": [
+        "Pago por uso: se paga solo por los recursos que se consumen, sin costos iniciales ni compromisos mínimos",
+        "Suscripción mensual fija: se paga una tarifa mensual por acceso a todos los servicios de AWS",
+        "Licencias anuales: se adquieren licencias por año para cada servicio AWS que se planea usar",
+        "Pago por capacidad: se paga por el máximo de recursos que podrían necesitarse, reservados de antemano"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS se basa en el modelo de precios de pago por uso. Solo se paga por los recursos informáticos, almacenamiento y otros servicios que realmente se utilizan, sin contratos a largo plazo ni licencias complejas. Cuando se dejan de usar los recursos, se deja de pagar. Esto contrasta con la informática tradicional donde se compra infraestructura por adelantado."
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Qué es el AWS Free Tier y qué tipos de ofertas incluye?",
+      "opciones": [
+        "Un nivel gratuito con tres tipos de ofertas: siempre gratis (como Lambda y DynamoDB), 12 meses gratis (como EC2 y S3) y pruebas de corto plazo",
+        "Un programa donde todo AWS es completamente gratuito durante el primer año sin restricciones",
+        "Un descuento del 50% en todos los servicios AWS para startups y estudiantes universitarios",
+        "Créditos gratuitos de 300 dólares que se pueden usar en cualquier servicio AWS durante 90 días"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El AWS Free Tier incluye tres tipos de ofertas: Always Free (servicios como AWS Lambda con 1 millón de invocaciones/mes y DynamoDB con 25 GB gratuitos permanentemente), 12 Months Free (servicios como EC2 con 750 horas/mes de instancias t2.micro y S3 con 5 GB durante el primer año), y Short-term Trials (pruebas gratuitas de días/semanas para servicios específicos)."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Qué descuento ofrecen los AWS Savings Plans comparado con los precios On-Demand?",
+      "opciones": [
+        "Hasta un 72% de descuento en EC2 y Lambda a cambio de comprometerse a un uso consistente en dólares por hora durante 1 o 3 años",
+        "Un 10% de descuento fijo en todos los servicios AWS por registrarse en el programa de ahorro",
+        "Hasta un 30% de descuento solo en instancias de base de datos RDS y Aurora",
+        "Un 50% de descuento garantizado en almacenamiento S3 y transferencia de datos saliente"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Los Savings Plans ofrecen descuentos de hasta 72% sobre los precios On-Demand a cambio de comprometerse a una cantidad específica de uso (en dólares por hora) durante 1 o 3 años. Son más flexibles que las Reserved Instances: Compute Savings Plans aplican automáticamente a EC2, Lambda y Fargate independientemente de la región, familia de instancia o sistema operativo."
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Qué es el Total Cost of Ownership (TCO) y por qué es importante al evaluar la migración a AWS?",
+      "opciones": [
+        "El costo total de poseer y operar infraestructura, incluyendo hardware, software, personal, instalaciones y electricidad, usado para comparar on-premises vs nube",
+        "El costo total de todos los servicios AWS usados en una cuenta durante un año fiscal",
+        "Una métrica que mide cuánto tiempo tarda en amortizarse la inversión en Reserved Instances de AWS",
+        "El precio de lista de todos los recursos AWS necesarios para una arquitectura específica"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El TCO considera todos los costos asociados con una solución tecnológica: hardware de servidores, licencias de software, costos de personal (administración, seguridad), instalaciones (espacio, energía, refrigeración), mantenimiento y depreciación. AWS proporciona la herramienta TCO Calculator para comparar el costo de infraestructura on-premises versus AWS, donde frecuentemente la nube resulta más económica al incluir todos los costos ocultos."
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Cómo funciona el descuento por volumen en servicios AWS como Amazon S3?",
+      "opciones": [
+        "Mientras más datos se almacenan, menor es el precio por GB: el costo unitario disminuye automáticamente al aumentar el volumen de uso",
+        "Se obtiene un descuento fijo del 20% cuando el gasto mensual supera los 10,000 dólares",
+        "El descuento por volumen requiere firmar un contrato anual especificando el volumen esperado",
+        "Los descuentos por volumen solo aplican a servicios de cómputo como EC2, no a almacenamiento"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS implementa precios escalonados donde el precio por unidad disminuye automáticamente a medida que aumenta el uso. Por ejemplo en S3: los primeros 50 TB/mes tienen un precio, los siguientes 450 TB un precio menor, y el almacenamiento por encima de 500 TB tiene aún menor precio por GB. Este descuento se aplica automáticamente sin necesidad de contratos especiales."
+    }
+  ]
+}

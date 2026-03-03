@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador AWS Cloud Practitioner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="header-logo">☁️</div>
+      <div>
+        <h1 class="header-title">Simulador AWS Cloud Practitioner</h1>
+        <p class="header-subtitle">Practica y prepárate para tu certificación</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Pantalla de inicio -->
+    <section id="start-screen" class="card">
+      <h2 class="section-title">Selecciona el modo de estudio</h2>
+
+      <div class="mode-selector">
+        <label class="mode-option">
+          <input type="radio" name="mode" value="category" checked />
+          <span class="mode-label">
+            <span class="mode-icon">📚</span>
+            <strong>Por Categoría</strong>
+            <small>Practica preguntas de un tema específico</small>
+          </span>
+        </label>
+        <label class="mode-option">
+          <input type="radio" name="mode" value="practical" />
+          <span class="mode-label">
+            <span class="mode-icon">🛠️</span>
+            <strong>Casos Prácticos</strong>
+            <small>10 escenarios del mundo real</small>
+          </span>
+        </label>
+        <label class="mode-option">
+          <input type="radio" name="mode" value="exam" />
+          <span class="mode-label">
+            <span class="mode-icon">🎯</span>
+            <strong>Modo Examen</strong>
+            <small>Mezcla aleatoria de todas las preguntas</small>
+          </span>
+        </label>
+      </div>
+
+      <div id="category-selector" class="category-selector">
+        <label for="category-select" class="label">Categoría:</label>
+        <select id="category-select" class="select">
+          <option value="computo">Cómputo (EC2, Lambda, Elastic Beanstalk)</option>
+          <option value="almacenamiento">Almacenamiento (S3, EBS, EFS)</option>
+          <option value="base-datos">Base de Datos (RDS, DynamoDB, Aurora)</option>
+          <option value="redes">Redes y Conectividad (VPC, CloudFront, Route 53)</option>
+          <option value="seguridad">Seguridad (IAM, KMS, GuardDuty, Shield)</option>
+          <option value="administracion">Administración (CloudWatch, CloudTrail, CloudFormation…)</option>
+          <option value="financiera">Gestión Financiera (Cost Explorer, Budgets)</option>
+          <option value="integracion">Integración (SNS, SQS)</option>
+          <option value="conceptos-fundamentales">Conceptos Fundamentales</option>
+        </select>
+      </div>
+
+      <button id="start-btn" class="btn btn-primary btn-large">
+        Comenzar Quiz
+      </button>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <span>Cargando preguntas…</span>
+      </div>
+      <div id="load-error" class="error-msg hidden"></div>
+    </section>
+
+    <!-- Panel de estadísticas -->
+    <section id="stats-panel" class="stats-panel hidden">
+      <div class="stat-item">
+        <span class="stat-value" id="stat-total">0</span>
+        <span class="stat-label">Respondidas</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value correct" id="stat-correct">0</span>
+        <span class="stat-label">Correctas</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value" id="stat-percent">0%</span>
+        <span class="stat-label">Aciertos</span>
+      </div>
+      <button id="restart-btn" class="btn btn-secondary">🔄 Reiniciar</button>
+    </section>
+
+    <!-- Pantalla de preguntas -->
+    <section id="quiz-screen" class="card hidden">
+      <div class="question-header">
+        <span id="question-counter" class="question-counter">Pregunta 1 / 10</span>
+        <span id="category-badge" class="category-badge"></span>
+      </div>
+
+      <div class="progress-bar">
+        <div id="progress-fill" class="progress-fill" style="width:0%"></div>
+      </div>
+
+      <p id="question-text" class="question-text"></p>
+
+      <div id="options-container" class="options-container"></div>
+
+      <div id="feedback" class="feedback hidden">
+        <div id="feedback-icon" class="feedback-icon"></div>
+        <div>
+          <p id="feedback-title" class="feedback-title"></p>
+          <p id="feedback-explanation" class="feedback-explanation"></p>
+        </div>
+      </div>
+
+      <div class="quiz-actions">
+        <button id="verify-btn" class="btn btn-primary" disabled>Verificar Respuesta</button>
+        <button id="next-btn" class="btn btn-secondary hidden">Siguiente Pregunta →</button>
+      </div>
+    </section>
+
+    <!-- Pantalla de resultados -->
+    <section id="results-screen" class="card hidden">
+      <div class="results-icon" id="results-emoji">🏆</div>
+      <h2 class="results-title" id="results-title">¡Quiz Completado!</h2>
+      <p class="results-subtitle" id="results-subtitle"></p>
+
+      <div class="results-stats">
+        <div class="result-stat">
+          <span class="result-stat-value" id="final-correct">0</span>
+          <span class="result-stat-label">Correctas</span>
+        </div>
+        <div class="result-stat">
+          <span class="result-stat-value" id="final-incorrect">0</span>
+          <span class="result-stat-label">Incorrectas</span>
+        </div>
+        <div class="result-stat">
+          <span class="result-stat-value" id="final-percent">0%</span>
+          <span class="result-stat-label">Puntaje</span>
+        </div>
+      </div>
+
+      <button id="play-again-btn" class="btn btn-primary btn-large">Jugar de Nuevo</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Simulador AWS Cloud Practitioner — Material de estudio. No es un producto oficial de Amazon Web Services.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+{
+  "categoria": "Administración y Gobernanza",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué es Amazon CloudWatch y cuál es su función principal en AWS?",
+      "opciones": [
+        "Un servicio de monitoreo y observabilidad que recopila métricas, logs y eventos de recursos AWS y aplicaciones",
+        "Un servicio de auditoría que registra todas las llamadas a la API de AWS para cumplimiento normativo",
+        "Un servicio de gestión de configuración que detecta cambios no autorizados en los recursos AWS",
+        "Un panel de control de costos que muestra el gasto en tiempo real de todos los servicios AWS"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon CloudWatch es el servicio de monitoreo y observabilidad de AWS. Recopila y visualiza métricas operativas en tiempo real, permite crear alarmas basadas en umbrales, almacena y analiza logs de aplicaciones e infraestructura, y puede activar acciones automáticas en respuesta a cambios en el estado de los recursos."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué son las CloudWatch Alarms y qué acciones pueden ejecutar?",
+      "opciones": [
+        "Monitores de métricas que pueden enviar notificaciones SNS, ejecutar acciones de Auto Scaling o parar/iniciar instancias EC2",
+        "Alertas de seguridad que bloquean automáticamente tráfico malicioso hacia los recursos monitoreados",
+        "Notificaciones de facturación que alertan cuando el gasto supera un umbral predefinido",
+        "Registros de auditoría que documentan cuándo los umbrales de rendimiento son superados"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Las CloudWatch Alarms monitorean una métrica y ejecutan acciones cuando el valor cruza un umbral configurado durante un período específico. Las acciones posibles incluyen: enviar notificaciones mediante SNS, ejecutar políticas de Auto Scaling (escalar hacia arriba o abajo), detener/iniciar/reiniciar/terminar instancias EC2, o ejecutar acciones de Systems Manager."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué son los CloudWatch Logs y qué tipo de datos pueden almacenar?",
+      "opciones": [
+        "Un servicio para almacenar, monitorear y acceder a archivos de log de instancias EC2, Lambda, RDS, aplicaciones y servicios AWS",
+        "Un sistema de almacenamiento de objetos optimizado para archivos de log de gran tamaño con compresión automática",
+        "Una base de datos de series temporales para almacenar métricas de rendimiento de aplicaciones",
+        "Un servicio de análisis de logs que genera reportes automáticos de patrones de uso"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "CloudWatch Logs permite monitorear, almacenar y acceder a los archivos de log desde instancias EC2, AWS Lambda, Amazon RDS, Amazon Route 53, CloudTrail y prácticamente cualquier fuente de logs. Permite crear filtros de métricas para extraer datos de los logs y crear alarmas sobre ellos."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué es Amazon EventBridge (anteriormente CloudWatch Events) y para qué se usa?",
+      "opciones": [
+        "Un bus de eventos serverless que conecta aplicaciones usando eventos de servicios AWS, aplicaciones SaaS y aplicaciones propias",
+        "Un servicio de mensajería pub/sub para comunicación asíncrona entre microservicios",
+        "Un servicio de streaming de datos en tiempo real para procesar millones de eventos por segundo",
+        "Un servicio de programación de tareas para ejecutar funciones Lambda en intervalos regulares"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon EventBridge es un bus de eventos serverless que facilita la construcción de aplicaciones impulsadas por eventos (event-driven). Puede responder a cambios de estado en servicios AWS (como un EC2 que cambia de estado), eventos de aplicaciones SaaS de terceros o eventos personalizados de aplicaciones propias, enrutándolos a destinos como Lambda, SQS, SNS o Step Functions."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cuál es la diferencia entre métricas básicas y métricas detalladas en Amazon CloudWatch para EC2?",
+      "opciones": [
+        "Métricas básicas se recopilan cada 5 minutos (gratuitas); métricas detalladas cada 1 minuto (tienen costo adicional)",
+        "Métricas básicas incluyen CPU y red; métricas detalladas incluyen memoria y uso de disco",
+        "Métricas básicas son para instancias on-demand; métricas detalladas para instancias reservadas",
+        "No hay diferencia real, son el mismo conjunto de métricas con diferente nombre"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El monitoreo básico de EC2 proporciona métricas en intervalos de 5 minutos sin costo adicional. El monitoreo detallado proporciona métricas en intervalos de 1 minuto con un costo adicional. Las métricas detalladas son útiles cuando se necesita reaccionar más rápidamente a cambios en el rendimiento o cuando se usa Auto Scaling con necesidad de respuesta más ágil."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué es AWS CloudTrail y qué información registra?",
+      "opciones": [
+        "Un servicio que registra todas las llamadas a la API de AWS realizadas en la cuenta, incluyendo quién, qué, cuándo y desde dónde",
+        "Un servicio de monitoreo de rendimiento que registra métricas de los recursos AWS en tiempo real",
+        "Un servicio de auditoría de código que registra todos los cambios en los repositorios de código fuente",
+        "Un registro de facturación detallado que documenta cada recurso creado y su costo asociado"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS CloudTrail registra la actividad de la cuenta AWS: cada llamada API realizada mediante la Consola, CLI, SDKs o servicios AWS. Para cada evento registra: quién realizó la acción (usuario/rol), qué acción realizó (API call), qué recursos fueron afectados, cuándo ocurrió y desde qué dirección IP. Es esencial para gobernanza, cumplimiento y auditoría de seguridad."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Cuánto tiempo retiene AWS CloudTrail el historial de eventos en la consola por defecto y cómo se puede extender?",
+      "opciones": [
+        "90 días en el historial de eventos gratuito; se puede extender configurando un Trail que envíe logs a S3 indefinidamente",
+        "30 días con opción de extender hasta 1 año pagando una tarifa adicional",
+        "365 días automáticamente sin necesidad de configuración adicional",
+        "Solo 7 días; requiere integración con CloudWatch Logs para retención más larga"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "CloudTrail mantiene el historial de eventos de gestión de los últimos 90 días de forma gratuita en la consola. Para retención más larga, se debe crear un Trail que envíe los logs automáticamente a un bucket S3, donde pueden retenerse por cualquier período deseado según las políticas de retención del bucket."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Qué es un CloudTrail Trail y para qué se usa?",
+      "opciones": [
+        "Una configuración que entrega continuamente los eventos de CloudTrail a un bucket S3 y opcionalmente a CloudWatch Logs para análisis y retención a largo plazo",
+        "Una ruta de red virtual que registra el tráfico entre recursos AWS para análisis de seguridad",
+        "Un conjunto de reglas de auditoría que define qué tipos de acciones de API se deben registrar",
+        "Un dashboard personalizado que muestra el historial de actividad de usuarios específicos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Un Trail es una configuración de CloudTrail que registra y entrega eventos a un bucket S3. Se puede configurar para una región específica o para todas las regiones. También puede enviar logs a CloudWatch Logs para monitoreo en tiempo real y crear alarmas sobre actividades específicas. Es fundamental para cumplimiento normativo a largo plazo."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Qué tipos de eventos puede registrar AWS CloudTrail?",
+      "opciones": [
+        "Eventos de gestión (operaciones en recursos), eventos de datos (operaciones en datos como S3 y Lambda) y eventos de Insights (actividad inusual)",
+        "Solo eventos de inicio de sesión de usuarios en la Consola de Administración de AWS",
+        "Únicamente eventos de creación y eliminación de recursos, no de modificación",
+        "Solo eventos de servicios de seguridad como IAM, KMS y GuardDuty"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "CloudTrail registra tres tipos de eventos: Management Events (operaciones de control como crear/modificar/eliminar recursos), Data Events (operaciones en datos como accesos a objetos S3 o invocaciones de Lambda, requieren configuración adicional) y Insights Events (patrones inusuales de actividad de API que pueden indicar comportamiento anómalo)."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Cómo ayuda AWS CloudTrail al cumplimiento normativo y la seguridad?",
+      "opciones": [
+        "Proporciona un registro inmutable de todas las acciones realizadas, permitiendo auditar quién hizo qué y cuándo para investigaciones de seguridad y cumplimiento",
+        "Bloquea automáticamente las acciones que violan las políticas de cumplimiento configuradas",
+        "Genera reportes automáticos de cumplimiento para regulaciones como PCI-DSS, HIPAA y SOC2",
+        "Cifra automáticamente todos los recursos de AWS para garantizar el cumplimiento de seguridad"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "CloudTrail proporciona visibilidad completa de la actividad de la cuenta AWS, lo cual es fundamental para: investigaciones de incidentes de seguridad (¿quién borró ese recurso?), cumplimiento normativo (demostrar quién accedió a datos sensibles), análisis forense después de una brecha, y detección de comportamiento inusual que podría indicar compromisos de seguridad."
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Qué es AWS CloudFormation y qué problema resuelve?",
+      "opciones": [
+        "Un servicio de Infrastructure as Code (IaC) que permite provisionar y gestionar infraestructura AWS mediante plantillas declarativas",
+        "Un servicio de monitoreo que analiza la configuración de la infraestructura para detectar desviaciones de las mejores prácticas",
+        "Una herramienta de migración que convierte infraestructura on-premises en recursos AWS automáticamente",
+        "Un servicio de documentación que genera diagramas de arquitectura basados en los recursos existentes"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS CloudFormation es un servicio de Infrastructure as Code que permite modelar, provisionar y gestionar recursos AWS mediante plantillas (YAML o JSON). Resuelve el problema de la configuración manual y no reproducible, permitiendo crear entornos completos de forma consistente, repetible y con control de versiones, como si fuera código de software."
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Qué formatos de plantilla soporta AWS CloudFormation?",
+      "opciones": [
+        "YAML y JSON son los dos formatos soportados para escribir plantillas de CloudFormation",
+        "Solo JSON, siendo el único formato oficialmente soportado y recomendado",
+        "YAML, JSON y XML como formatos de intercambio de datos estándar",
+        "HCL (HashiCorp Configuration Language) compatible con Terraform y JSON"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS CloudFormation soporta plantillas escritas en YAML y JSON. YAML es generalmente preferido por los desarrolladores por ser más legible (soporta comentarios, tiene menos verbosidad), mientras que JSON es útil cuando se necesita compatibilidad con herramientas que requieren este formato o cuando se genera la plantilla programáticamente."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Qué es un Stack en AWS CloudFormation?",
+      "opciones": [
+        "Una colección de recursos AWS que se crean, actualizan y eliminan juntos como una unidad a partir de una plantilla",
+        "Una versión específica de una plantilla de CloudFormation almacenada en el historial de cambios",
+        "Un grupo de recursos AWS en la misma región que comparten políticas de costos y etiquetas",
+        "Un entorno de pruebas aislado donde se validan las plantillas antes de aplicarlas en producción"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Un Stack es la unidad fundamental de CloudFormation. Cuando se crea un stack a partir de una plantilla, CloudFormation aprovisiona todos los recursos definidos en ella. Si se elimina el stack, todos sus recursos se eliminan automáticamente. Los stacks permiten gestionar conjuntos de recursos relacionados como una unidad lógica."
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Qué son los Change Sets en AWS CloudFormation y por qué son útiles?",
+      "opciones": [
+        "Un resumen de los cambios que CloudFormation realizará en un stack antes de aplicarlos, permitiendo revisar el impacto antes de ejecutar",
+        "Un registro histórico de todos los cambios aplicados a un stack desde su creación",
+        "Un conjunto de reglas que define qué tipos de cambios están permitidos en un stack de producción",
+        "Una funcionalidad de rollback automático que revierte cambios cuando se detectan errores"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Los Change Sets permiten ver exactamente qué cambios realizará CloudFormation en los recursos existentes antes de aplicarlos. Esto es crucial para evitar cambios inesperados, especialmente en producción. Por ejemplo, identificar si un cambio reemplazará una instancia de base de datos (causando pérdida de datos) antes de proceder."
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Qué es la detección de drift (drift detection) en AWS CloudFormation?",
+      "opciones": [
+        "Una característica que identifica diferencias entre el estado actual de los recursos y el estado definido en la plantilla de CloudFormation",
+        "Una función que detecta cuándo una plantilla de CloudFormation tiene errores de sintaxis antes de desplegarla",
+        "Un servicio que monitorea los cambios en las plantillas de CloudFormation almacenadas en S3",
+        "Una alerta que se activa cuando el costo de los recursos de un stack supera un presupuesto definido"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La detección de drift identifica cuando los recursos de un stack han sido modificados manualmente fuera de CloudFormation (drift). Esto es importante para mantener la integridad del código de infraestructura: si alguien modifica un Security Group manualmente, drift detection lo detectará, permitiendo sincronizar la plantilla o revertir el cambio."
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Qué es AWS Auto Scaling y qué recursos puede escalar automáticamente?",
+      "opciones": [
+        "Un servicio que ajusta automáticamente la capacidad de los recursos AWS según la demanda para mantener rendimiento y optimizar costos",
+        "Un servicio exclusivo para escalar instancias EC2 basándose en el uso de CPU",
+        "Una función de CloudWatch que reinicia automáticamente instancias que superan umbrales de rendimiento",
+        "Un servicio que duplica la capacidad de recursos cuando detecta cualquier incremento en el tráfico"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Auto Scaling monitorea aplicaciones y ajusta automáticamente la capacidad para mantener un rendimiento constante y predecible al menor costo posible. Puede escalar múltiples tipos de recursos: grupos de Auto Scaling de EC2, tareas de ECS, instancias de flota de Spot, funciones de Lambda con concurrencia aprovisionada y réplicas de lectura de Aurora."
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Qué es la política de escalado Target Tracking en EC2 Auto Scaling?",
+      "opciones": [
+        "Una política que ajusta automáticamente la capacidad para mantener una métrica específica en un valor objetivo, como mantener la CPU al 50%",
+        "Una política que rastrea el origen del tráfico para escalar los recursos más cercanos a los usuarios",
+        "Una política que escala basándose en una programación horaria predefinida de antemano",
+        "Una política que espera a que la capacidad actual sea 100% utilizada antes de agregar más recursos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Target Tracking Scaling es la política más sencilla de configurar. Se elige una métrica (como CPU utilization o número de solicitudes por instancia) y un valor objetivo, y Auto Scaling crea y gestiona automáticamente las alarmas de CloudWatch para escalar hacia arriba y hacia abajo según sea necesario para mantener esa métrica en el valor objetivo."
+    },
+    {
+      "id": 18,
+      "pregunta": "¿Qué es el período de enfriamiento (cooldown period) en EC2 Auto Scaling?",
+      "opciones": [
+        "Un período de tiempo después de una actividad de escalado durante el cual Auto Scaling no realiza más actividades de escalado para permitir que las métricas se estabilicen",
+        "El tiempo que tarda una instancia EC2 en iniciarse completamente y estar lista para recibir tráfico",
+        "Un período de gracia donde las instancias nuevas no son evaluadas por los health checks del balanceador de carga",
+        "El tiempo máximo que Auto Scaling espera antes de forzar el escalado cuando la capacidad está al 100%"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El período de cooldown es un tiempo configurable (por defecto 300 segundos) después de una actividad de escalado durante el cual Auto Scaling no lanza ni termina instancias adicionales. Esto evita que Auto Scaling responda a métricas que aún están fluctuando después de un cambio reciente, previniendo ciclos de escalado innecesarios."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Qué son los Launch Templates en EC2 Auto Scaling y qué ventajas tienen?",
+      "opciones": [
+        "Plantillas que definen la configuración de las instancias EC2 (AMI, tipo, security groups, etc.) con soporte para múltiples versiones y opciones avanzadas",
+        "Scripts de arranque (user data) que se ejecutan automáticamente cuando se lanza una nueva instancia EC2",
+        "Configuraciones de red predefinidas que se aplican automáticamente a nuevas instancias en un grupo de Auto Scaling",
+        "Políticas de precios que determinan qué combinación de On-Demand y Spot Instances usar"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Los Launch Templates especifican la configuración para lanzar instancias EC2 en un grupo de Auto Scaling: AMI, tipo de instancia, par de claves, security groups, almacenamiento y configuración avanzada. Son la evolución de Launch Configurations (ya obsoletas): soportan múltiples versiones, permiten combinar tipos de instancias y mezclar On-Demand con Spot Instances."
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Qué es el Scheduled Scaling en EC2 Auto Scaling y cuándo se usa?",
+      "opciones": [
+        "Escalar automáticamente según un horario predefinido, útil cuando los patrones de tráfico son predecibles y conocidos de antemano",
+        "Un proceso que escala los recursos gradualmente durante un período de tiempo para evitar interrupciones",
+        "Una función que programa el escalado para horarios de bajo costo como fines de semana y noches",
+        "Una política que escala basándose en predicciones de machine learning del tráfico futuro"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Scheduled Scaling permite configurar cambios de capacidad en fechas y horas específicas. Es ideal cuando los patrones de tráfico son predecibles: por ejemplo, una aplicación empresarial que siempre tiene más tráfico de lunes a viernes de 9 a 18 horas, o una tienda online que sabe con anticipación cuándo tendrá eventos de ventas especiales."
+    },
+    {
+      "id": 21,
+      "pregunta": "¿Qué es AWS Organizations y cuál es su función principal?",
+      "opciones": [
+        "Un servicio para gestionar y gobernar centralmente múltiples cuentas AWS dentro de una organización",
+        "Un directorio de empleados que mapea los usuarios de AWS IAM con la estructura organizacional de la empresa",
+        "Un servicio de gestión de proyectos que organiza los recursos AWS por equipos y departamentos",
+        "Una herramienta de facturación que consolida los gastos de múltiples proyectos en una sola factura"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Organizations permite crear una organización para consolidar y gestionar centralmente múltiples cuentas AWS. Facilita la administración de políticas de seguridad y cumplimiento, proporciona facturación consolidada para aprovechar descuentos por volumen, y permite automatizar la creación y gestión de cuentas AWS."
+    },
+    {
+      "id": 22,
+      "pregunta": "¿Qué es la facturación consolidada (consolidated billing) en AWS Organizations?",
+      "opciones": [
+        "Una característica que combina el uso de todas las cuentas miembro en una sola factura y puede reducir costos al agregar uso para descuentos por volumen",
+        "Un servicio que genera una factura separada por cada cuenta AWS con un resumen ejecutivo mensual",
+        "Una función que distribuye automáticamente los costos entre departamentos según las etiquetas de recursos",
+        "Un sistema de alertas que notifica cuando cualquier cuenta de la organización supera su presupuesto"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La facturación consolidada combina el uso de todas las cuentas miembro de una organización en una sola factura pagada por la cuenta de gestión. Esto es beneficioso porque el uso combinado puede calificar para descuentos por niveles de uso (más uso = menor precio unitario en servicios como S3 y transferencia de datos) y las Reserved Instances pueden compartirse entre cuentas."
+    },
+    {
+      "id": 23,
+      "pregunta": "¿Qué son las Service Control Policies (SCPs) en AWS Organizations?",
+      "opciones": [
+        "Políticas que definen el máximo de permisos disponibles para las cuentas en una unidad organizacional, actuando como guardianes de seguridad",
+        "Políticas de IAM que se aplican automáticamente a todos los usuarios de todas las cuentas miembro",
+        "Reglas que controlan qué servicios AWS pueden ser aprovisionados según criterios de costo",
+        "Configuraciones de red que restringen la comunicación entre cuentas AWS en una organización"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Las SCPs son políticas de control de servicios que establecen los límites máximos de permisos para todas las cuentas de una unidad organizacional (OU) o cuenta específica. No otorgan permisos directamente; sino que definen qué acciones pueden estar permitidas. Incluso el usuario root de una cuenta miembro queda restringido por las SCPs."
+    },
+    {
+      "id": 24,
+      "pregunta": "¿Qué son las Organizational Units (OUs) en AWS Organizations?",
+      "opciones": [
+        "Contenedores dentro de una organización que agrupan cuentas AWS para aplicar políticas comunes de forma jerárquica",
+        "Grupos de usuarios que tienen acceso a múltiples cuentas AWS dentro de la organización",
+        "Regiones geográficas designadas para las cuentas de una organización según su ubicación",
+        "Categorías de costo que clasifican los recursos AWS para análisis de gastos por departamento"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Las OUs son contenedores que pueden contener cuentas AWS u otras OUs, formando una estructura jerárquica. Permiten aplicar políticas (SCPs) a grupos de cuentas de forma consistente. Por ejemplo, se puede crear OUs para Producción, Desarrollo y Testing, aplicando políticas diferentes a cada una según sus requisitos de seguridad y acceso."
+    },
+    {
+      "id": 25,
+      "pregunta": "¿Qué es la Management Account (cuenta de gestión) en AWS Organizations y qué responsabilidades tiene?",
+      "opciones": [
+        "La cuenta raíz de la organización desde la que se crean y gestiona la estructura de cuentas, políticas y facturación consolidada",
+        "La cuenta con mayor presupuesto asignado que puede crear recursos en nombre de todas las demás cuentas",
+        "Una cuenta compartida donde todos los administradores de la organización tienen acceso root",
+        "La cuenta con mayor nivel de seguridad que almacena todos los datos sensibles de la organización"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La Management Account (antes llamada Master Account) es la cuenta que crea la organización y tiene responsabilidades únicas: paga la factura consolidada de todas las cuentas miembro, puede crear y eliminar cuentas, gestionar OUs y SCPs, e invitar otras cuentas a unirse. AWS recomienda no usar la Management Account para cargas de trabajo de producción."
+    },
+    {
+      "id": 26,
+      "pregunta": "¿Qué es AWS Trusted Advisor y qué tipo de recomendaciones proporciona?",
+      "opciones": [
+        "Un servicio que analiza la cuenta AWS y proporciona recomendaciones en tiempo real para optimizar costos, rendimiento, seguridad, tolerancia a fallos y límites de servicio",
+        "Un consultor de AWS que revisa mensualmente la arquitectura de la cuenta y sugiere mejoras",
+        "Un servicio de documentación que explica las mejores prácticas de AWS para cada servicio",
+        "Una herramienta de análisis de código que detecta vulnerabilidades de seguridad en aplicaciones"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Trusted Advisor es como un experto en la nube que inspecciona continuamente el entorno AWS y proporciona recomendaciones accionables en cinco categorías: optimización de costos, rendimiento, seguridad, tolerancia a fallos y límites de servicio. Ayuda a identificar oportunidades de ahorro, configuraciones de seguridad débiles y riesgos operativos."
+    },
+    {
+      "id": 27,
+      "pregunta": "¿Cuáles son las cinco categorías de cheques que proporciona AWS Trusted Advisor?",
+      "opciones": [
+        "Optimización de Costos, Rendimiento, Seguridad, Tolerancia a Fallos y Límites de Servicio",
+        "Seguridad, Cumplimiento, Gobernanza, Costos y Disponibilidad",
+        "Redes, Almacenamiento, Cómputo, Bases de Datos y Seguridad",
+        "IAM, Cifrado, Acceso Público, Costos y Métricas de Rendimiento"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Trusted Advisor analiza el entorno AWS en cinco categorías: Optimización de Costos (identifica recursos sin usar o sobreutilizados), Rendimiento (identifica cuellos de botella), Seguridad (detecta configuraciones de seguridad débiles), Tolerancia a Fallos (identifica falta de redundancia) y Límites de Servicio (alerta cuando se acercan los límites de servicio de AWS)."
+    },
+    {
+      "id": 28,
+      "pregunta": "¿Qué cheques de Trusted Advisor están disponibles para todos los clientes AWS de forma gratuita?",
+      "opciones": [
+        "Un conjunto básico de cheques de seguridad y límites de servicio, incluyendo grupos de seguridad con puertos abiertos, uso de MFA y límites de servicio",
+        "Todos los cheques de las cinco categorías son gratuitos para todas las cuentas AWS",
+        "Solo los cheques de optimización de costos están disponibles gratuitamente",
+        "Solo los cheques de rendimiento están disponibles en el nivel gratuito"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Todos los clientes de AWS tienen acceso a un subconjunto de cheques de Trusted Advisor de forma gratuita, incluyendo cheques de seguridad fundamentales (como grupos de seguridad con puertos de alto riesgo abiertos, uso de MFA en la cuenta root, bucket S3 públicos) y los cheques de límites de servicio. El acceso completo a todos los cheques requiere un plan de soporte Business o Enterprise."
+    },
+    {
+      "id": 29,
+      "pregunta": "¿Cómo puede AWS Trusted Advisor ayudar a reducir los costos de una cuenta AWS?",
+      "opciones": [
+        "Identificando instancias EC2 con bajo uso, volúmenes EBS sin usar, direcciones IP elásticas no asociadas y reservas expiradas o subutilizadas",
+        "Negociando automáticamente precios más bajos con AWS basándose en el volumen de uso histórico",
+        "Redirigiendo tráfico a regiones AWS más económicas sin necesidad de configuración manual",
+        "Eliminando automáticamente recursos no utilizados que superan el período de retención configurado"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Trusted Advisor analiza el uso de recursos e identifica oportunidades de ahorro: instancias EC2 con uso de CPU menor al 10% durante 14 días (candidatas a right-sizing o eliminación), volúmenes EBS desconectados, Elastic IPs no asociadas, snapshots de EBS muy antiguos, y Reserved Instances con bajo uso. Esto puede generar ahorros significativos."
+    },
+    {
+      "id": 30,
+      "pregunta": "¿Con qué plan de soporte de AWS se obtiene acceso completo a todas las verificaciones de Trusted Advisor?",
+      "opciones": [
+        "Business Support o Enterprise Support proporcionan acceso completo a todos los cheques de Trusted Advisor",
+        "Solo el plan Enterprise Support incluye acceso completo a Trusted Advisor",
+        "El plan Developer Support incluye todos los cheques de seguridad y costos",
+        "Todos los planes de soporte incluyendo el plan Basic tienen acceso a todos los cheques"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El acceso completo a todos los cheques de AWS Trusted Advisor (incluyendo todas las verificaciones de rendimiento, tolerancia a fallos y optimización de costos) está disponible con los planes de soporte Business y Enterprise. El plan Basic y Developer solo tienen acceso a los cheques básicos de seguridad y límites de servicio."
+    }
+  ]
+}

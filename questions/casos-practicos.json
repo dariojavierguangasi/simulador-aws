@@ -1,0 +1,125 @@
+{
+  "categoria": "Casos Prácticos",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "Una empresa necesita migrar su base de datos Oracle on-premises a AWS con el mínimo tiempo de inactividad posible. ¿Qué servicio de AWS es más adecuado para esta migración?",
+      "opciones": [
+        "AWS Database Migration Service (DMS)",
+        "AWS DataSync",
+        "AWS Snowball",
+        "Amazon S3 Transfer Acceleration"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS Database Migration Service (DMS) está diseñado específicamente para migrar bases de datos a AWS con mínimo downtime. Soporta migraciones homogéneas (Oracle a Oracle) y heterogéneas (Oracle a Aurora). Permite replicación continua durante la migración."
+    },
+    {
+      "id": 2,
+      "pregunta": "Una startup almacena documentos médicos en S3 que raramente se acceden, pero cuando se necesitan, la recuperación debe ser inmediata (milisegundos). ¿Qué clase de almacenamiento S3 optimiza los costos?",
+      "opciones": [
+        "S3 Standard-IA",
+        "S3 Standard",
+        "S3 Glacier",
+        "S3 Glacier Deep Archive"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "S3 Standard-IA (Infrequent Access) es perfecta para este caso: datos que no se acceden frecuentemente pero requieren recuperación inmediata cuando se necesitan. Ofrece menor costo de almacenamiento que S3 Standard con acceso en milisegundos."
+    },
+    {
+      "id": 3,
+      "pregunta": "Una aplicación de e-commerce experimenta picos de tráfico impredecibles durante eventos de ventas especiales. ¿Cuál es la arquitectura más adecuada para manejar esta variabilidad?",
+      "opciones": [
+        "EC2 Auto Scaling con Elastic Load Balancer",
+        "Una instancia EC2 grande siempre activa",
+        "AWS Lambda únicamente",
+        "Amazon RDS Multi-AZ únicamente"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "EC2 Auto Scaling con ELB es la arquitectura correcta para tráfico variable. Auto Scaling ajusta automáticamente el número de instancias según la demanda, y ELB distribuye el tráfico equitativamente. Esto optimiza costos y garantiza disponibilidad."
+    },
+    {
+      "id": 4,
+      "pregunta": "El equipo de seguridad de una empresa necesita auditar todas las llamadas API realizadas en su cuenta AWS para cumplir con regulaciones. ¿Qué servicio proporciona este registro?",
+      "opciones": [
+        "AWS CloudTrail",
+        "Amazon CloudWatch",
+        "AWS Config",
+        "AWS GuardDuty"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "AWS CloudTrail registra todas las llamadas API realizadas en la cuenta AWS, incluyendo quién realizó la llamada, desde qué IP, cuándo y qué parámetros se usaron. Es esencial para auditorías de seguridad y cumplimiento normativo."
+    },
+    {
+      "id": 5,
+      "pregunta": "Una empresa de servicios financieros necesita que su aplicación web esté disponible incluso si una región AWS completa falla. ¿Cómo debe diseñar la arquitectura?",
+      "opciones": [
+        "Multi-región activo-activo con Route 53 Failover",
+        "Multi-AZ dentro de una sola región",
+        "Backup en S3 en una segunda región",
+        "Reserved Instances en múltiples regiones"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Para alta disponibilidad ante fallo de región completa, se necesita una arquitectura multi-región. Route 53 con política de Failover puede redirigir tráfico automáticamente a la región secundaria si la primaria falla."
+    },
+    {
+      "id": 6,
+      "pregunta": "Una empresa necesita migrar 80TB de datos desde sus instalaciones on-premises a AWS, pero su conexión a internet es limitada (100 Mbps). ¿Cuánto tiempo tomaría la transferencia y qué solución alternativa ofrece AWS?",
+      "opciones": [
+        "Semanas/meses por internet; AWS Snowball Edge para migración física",
+        "Horas; usar S3 Transfer Acceleration",
+        "Días; usar AWS Direct Connect",
+        "Minutos; usar AWS DataSync"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Transferir 80TB a 100 Mbps tomaría aproximadamente 74 días. AWS Snowball Edge es un dispositivo físico de almacenamiento que AWS envía al cliente, quien carga los datos y lo devuelve. AWS los carga en S3, completando la migración en días."
+    },
+    {
+      "id": 7,
+      "pregunta": "Una aplicación móvil necesita autenticar a millones de usuarios y permitirles acceder a recursos AWS de forma segura. ¿Qué servicio de AWS gestiona la autenticación y autorización de usuarios?",
+      "opciones": [
+        "Amazon Cognito",
+        "AWS IAM",
+        "AWS Directory Service",
+        "AWS Single Sign-On"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon Cognito proporciona autenticación, autorización y gestión de usuarios para aplicaciones web y móviles. Soporta millones de usuarios, inicio de sesión social (Google, Facebook) y proveedores SAML, generando credenciales temporales de AWS."
+    },
+    {
+      "id": 8,
+      "pregunta": "Una empresa quiere hospedar un sitio web estático con distribución global y la menor latencia posible para usuarios en todo el mundo. ¿Cuál es la arquitectura óptima?",
+      "opciones": [
+        "S3 para hosting estático + CloudFront como CDN",
+        "EC2 en múltiples regiones + Route 53",
+        "Elastic Beanstalk con múltiples instancias",
+        "EC2 con ELB global"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La combinación de S3 (hosting estático económico y altamente disponible) con CloudFront (CDN con más de 400 puntos de presencia globales) es la arquitectura óptima para sitios web estáticos globales. Ofrece baja latencia, alta disponibilidad y bajo costo."
+    },
+    {
+      "id": 9,
+      "pregunta": "Una empresa de IoT recibe millones de eventos por segundo de dispositivos conectados y necesita procesarlos en tiempo real. ¿Qué servicio de AWS es más adecuado?",
+      "opciones": [
+        "Amazon Kinesis Data Streams",
+        "Amazon SQS",
+        "AWS Lambda únicamente",
+        "Amazon S3"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon Kinesis Data Streams está diseñado para ingerir y procesar grandes volúmenes de datos en tiempo real (hasta millones de registros por segundo). Es ideal para datos de IoT, logs de aplicaciones y análisis en tiempo real."
+    },
+    {
+      "id": 10,
+      "pregunta": "Una empresa tiene instancias EC2 que ejecutan cargas de trabajo de producción 24/7 durante los próximos 3 años. ¿Qué modelo de precios optimizará mejor los costos?",
+      "opciones": [
+        "Reserved Instances (3 años, pago completo)",
+        "On-Demand Instances",
+        "Spot Instances",
+        "Dedicated Hosts On-Demand"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Para cargas de trabajo predecibles que corren 24/7 durante 3 años, las Reserved Instances con pago completo por adelantado ofrecen el mayor descuento (hasta 75% vs On-Demand). Spot Instances no son adecuadas para cargas críticas 24/7 ya que pueden interrumpirse."
+    }
+  ]
+}

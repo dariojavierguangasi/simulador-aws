@@ -1,0 +1,185 @@
+{
+  "categoria": "Almacenamiento",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué clase de almacenamiento de S3 es más adecuada para datos a los que se accede con poca frecuencia pero que requieren acceso inmediato cuando se necesitan?",
+      "opciones": [
+        "S3 Standard-IA (Infrequent Access)",
+        "S3 Standard",
+        "S3 Glacier",
+        "S3 One Zone-IA"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "S3 Standard-IA está diseñado para datos a los que se accede con menos frecuencia pero que requieren acceso rápido cuando se necesitan. Ofrece menor costo de almacenamiento que S3 Standard, pero con un costo por recuperación de datos."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Cuántos 9's de durabilidad garantiza Amazon S3 para los objetos almacenados?",
+      "opciones": [
+        "99.999999999% (11 nueves)",
+        "99.99% (4 nueves)",
+        "99.9% (3 nueves)",
+        "99% (2 nueves)"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon S3 está diseñado para proporcionar 99.999999999% (11 nueves) de durabilidad de los objetos. Esto significa que en promedio se perdería 1 objeto de cada 10,000 millones almacenados durante 10,000 años."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué característica de S3 permite reducir costos moviendo automáticamente objetos entre clases de almacenamiento según patrones de acceso?",
+      "opciones": [
+        "S3 Intelligent-Tiering",
+        "S3 Lifecycle Policies",
+        "S3 Replication",
+        "S3 Versioning"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "S3 Intelligent-Tiering monitorea automáticamente los patrones de acceso y mueve los objetos entre niveles de acceso frecuente e infrecuente, optimizando costos sin impacto en el rendimiento."
+    },
+    {
+      "id": 4,
+      "pregunta": "Una empresa quiere almacenar archivos de logs de hace más de 7 años para cumplimiento normativo, con acceso extremadamente raro. ¿Qué clase de S3 es más económica?",
+      "opciones": [
+        "S3 Glacier Deep Archive",
+        "S3 Standard",
+        "S3 Standard-IA",
+        "S3 One Zone-IA"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "S3 Glacier Deep Archive es la clase de almacenamiento más económica de AWS, diseñada para datos que se retienen por 7-10 años o más y rara vez se necesitan. El tiempo de recuperación puede ser de 12-48 horas."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué es el versionado (versioning) en Amazon S3 y cuál es su principal beneficio?",
+      "opciones": [
+        "Mantiene múltiples versiones de un objeto para proteger contra eliminaciones accidentales",
+        "Cifra automáticamente todos los objetos almacenados",
+        "Replica objetos entre regiones automáticamente",
+        "Comprime objetos para reducir costos de almacenamiento"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El versionado de S3 mantiene múltiples variantes de un objeto en el mismo bucket. Protege contra eliminaciones y sobrescrituras accidentales, permitiendo recuperar versiones anteriores de los objetos."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué tipo de almacenamiento es Amazon EBS (Elastic Block Store)?",
+      "opciones": [
+        "Almacenamiento en bloque persistente para instancias EC2",
+        "Almacenamiento de objetos accesible desde internet",
+        "Sistema de archivos compartido para múltiples instancias",
+        "Almacenamiento temporal que se pierde al detener la instancia"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon EBS proporciona volúmenes de almacenamiento en bloque persistentes para instancias EC2. Los datos persisten independientemente del ciclo de vida de la instancia y se pueden adjuntar/desadjuntar de las instancias."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Cuántas instancias EC2 pueden conectarse simultáneamente a un volumen EBS estándar?",
+      "opciones": [
+        "Un volumen EBS estándar solo puede estar conectado a una instancia EC2 a la vez",
+        "Hasta 16 instancias simultáneamente",
+        "Número ilimitado de instancias",
+        "Hasta 4 instancias en la misma AZ"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Un volumen EBS estándar solo puede estar adjunto a una instancia EC2 a la vez (en la misma zona de disponibilidad). Sin embargo, EBS Multi-Attach permite conectar un volumen io1/io2 a múltiples instancias."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Qué tipo de volumen EBS es más adecuado para bases de datos de producción con alto rendimiento de IOPS?",
+      "opciones": [
+        "EBS Provisioned IOPS SSD (io1/io2)",
+        "EBS General Purpose SSD (gp2/gp3)",
+        "EBS Throughput Optimized HDD (st1)",
+        "EBS Cold HDD (sc1)"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Los volúmenes EBS Provisioned IOPS SSD (io1/io2) están diseñados para cargas de trabajo con uso intensivo de E/S que requieren rendimiento de IOPS predecible y bajo latencia, como bases de datos relacionales."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Qué característica de EBS permite crear copias de seguridad incrementales de los volúmenes?",
+      "opciones": [
+        "EBS Snapshots",
+        "EBS Replication",
+        "EBS Versioning",
+        "EBS Backup Policy"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Los EBS Snapshots son copias de seguridad incrementales de los volúmenes EBS almacenadas en S3. Solo se guardan los bloques cambiados desde el último snapshot, optimizando el costo y tiempo de respaldo."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿En qué se diferencia el almacenamiento de instancias (Instance Store) de EBS?",
+      "opciones": [
+        "El almacenamiento de instancias es temporal y se pierde al detener/terminar la instancia; EBS es persistente",
+        "EBS es temporal y más rápido; el almacenamiento de instancias es persistente",
+        "Ambos son equivalentes en términos de persistencia",
+        "Instance Store solo está disponible en Linux; EBS solo en Windows"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El almacenamiento de instancias (Instance Store) proporciona almacenamiento temporal conectado físicamente al host. Los datos se pierden cuando la instancia se detiene, termina o falla. EBS es un almacenamiento en red persistente."
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Qué es Amazon EFS (Elastic File System)?",
+      "opciones": [
+        "Un sistema de archivos NFS totalmente gestionado y elástico para Linux",
+        "Un sistema de archivos SMB para instancias Windows",
+        "Un sistema de almacenamiento de objetos para aplicaciones web",
+        "Un volumen de almacenamiento en bloque para bases de datos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon EFS es un sistema de archivos NFS (Network File System) totalmente gestionado para Linux que crece y se reduce automáticamente. Permite acceso compartido desde múltiples instancias EC2 simultáneamente."
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Cuántas instancias EC2 pueden acceder simultáneamente a Amazon EFS?",
+      "opciones": [
+        "Miles de instancias pueden acceder simultáneamente",
+        "Solo una instancia a la vez",
+        "Máximo 16 instancias",
+        "Solo instancias en la misma zona de disponibilidad"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon EFS está diseñado para ser accedido por miles de instancias EC2 simultáneamente desde múltiples zonas de disponibilidad dentro de una región, lo que lo hace ideal para sistemas de archivos compartidos."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Cuál es la principal diferencia entre EFS y EBS en términos de acceso?",
+      "opciones": [
+        "EFS permite acceso compartido desde múltiples instancias; EBS generalmente solo desde una instancia",
+        "EBS es más rápido que EFS para todos los casos de uso",
+        "EFS solo funciona con Windows; EBS con Linux",
+        "EBS escala automáticamente; EFS requiere aprovisionamiento manual"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La diferencia principal es que EFS es un sistema de archivos compartido que puede ser montado simultáneamente en miles de instancias EC2, mientras que EBS típicamente se adjunta a una sola instancia a la vez."
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Qué modo de rendimiento de EFS es más adecuado para cargas de trabajo con alta concurrencia como servidores web?",
+      "opciones": [
+        "General Purpose (Propósito General)",
+        "Max I/O",
+        "Provisioned Throughput",
+        "Bursting Throughput"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El modo General Purpose de EFS es el más adecuado para la mayoría de las cargas de trabajo sensibles a la latencia, incluyendo servidores web y gestión de contenido. Ofrece las latencias más bajas para operaciones de E/S de archivos."
+    },
+    {
+      "id": 15,
+      "pregunta": "Una empresa tiene una aplicación con múltiples servidores web que necesitan compartir el mismo sistema de archivos. ¿Qué servicio de almacenamiento de AWS es más apropiado?",
+      "opciones": [
+        "Amazon EFS",
+        "Amazon EBS",
+        "Amazon S3",
+        "AWS Storage Gateway"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amazon EFS es ideal para este caso de uso porque permite que múltiples instancias EC2 accedan al mismo sistema de archivos simultáneamente. EBS generalmente se adjunta a una sola instancia, y S3 no es un sistema de archivos tradicional."
+    }
+  ]
+}
