@@ -1,245 +1,125 @@
 {
-  "categoria": "Seguridad y Cumplimiento",
+  "categoria": "Seguridad",
   "preguntas": [
     {
       "id": 1,
-      "pregunta": "¿Qué es AWS IAM (Identity and Access Management) y cuál es su función principal?",
+      "pregunta": "¿Qué servicio de AWS permite administrar usuarios, grupos, roles y permisos dentro de una cuenta AWS?",
       "opciones": [
-        "Un servicio que controla de forma segura el acceso a los recursos de AWS mediante usuarios, grupos, roles y políticas",
-        "Un servicio de monitoreo que registra todos los accesos a los recursos de AWS para auditorías",
-        "Un servicio de firewall que protege las aplicaciones web de ataques externos",
-        "Un servicio de directorio corporativo para sincronizar usuarios de Active Directory con AWS"
+        "AWS Identity and Access Management (IAM)",
+        "Amazon Cognito",
+        "AWS Shield",
+        "AWS Artifact"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "AWS IAM permite gestionar el acceso a los servicios y recursos de AWS de forma segura. Con IAM se pueden crear y gestionar usuarios y grupos de AWS, y usar permisos para permitir o denegar su acceso a los recursos AWS. IAM es gratuito y está disponible en todas las cuentas AWS."
+      "explicacion": "AWS IAM permite administrar identidades y permisos dentro de una cuenta AWS mediante usuarios, grupos, roles y políticas."
     },
     {
       "id": 2,
-      "pregunta": "¿Cuál es la diferencia entre un IAM User, un IAM Group y un IAM Role?",
+      "pregunta": "¿Cuál es una buena práctica recomendada al asignar permisos en AWS?",
       "opciones": [
-        "User es una identidad individual permanente; Group agrupa usuarios para gestión de permisos; Role es una identidad temporal asumible por servicios o usuarios",
-        "User tiene más privilegios que Group; Role es solo para aplicaciones externas",
-        "Group es un conjunto de Roles; User no puede pertenecer a múltiples Groups",
-        "Role y User son equivalentes; Group solo sirve para organización visual sin efecto en permisos"
+        "Aplicar el principio de privilegio mínimo",
+        "Asignar permisos administrativos a todos los usuarios",
+        "Compartir el usuario root con todo el equipo",
+        "Crear una sola política para todos los servicios"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Un IAM User es una identidad permanente para una persona o aplicación. Un IAM Group es una colección de usuarios que comparten los mismos permisos, facilitando la gestión. Un IAM Role es una identidad con permisos específicos que puede ser asumida temporalmente por usuarios, servicios AWS (como EC2 o Lambda) o usuarios de cuentas externas."
+      "explicacion": "El principio de privilegio mínimo consiste en otorgar solo los permisos estrictamente necesarios para realizar una tarea."
     },
     {
       "id": 3,
-      "pregunta": "¿Qué es el principio de mínimo privilegio (Least Privilege) en IAM y por qué es importante?",
+      "pregunta": "¿Qué tipo de entidad de IAM es ideal para otorgar permisos temporales a servicios como AWS Lambda o Amazon EC2?",
       "opciones": [
-        "Otorgar solo los permisos estrictamente necesarios para realizar una tarea, reduciendo el riesgo de seguridad",
-        "Asignar todos los permisos disponibles inicialmente y revocarlos gradualmente según se necesite",
-        "Limitar el número de usuarios en una cuenta AWS para reducir la superficie de ataque",
-        "Restringir el acceso a AWS solo desde redes corporativas mediante políticas de IP"
+        "IAM Role",
+        "IAM User",
+        "IAM Group",
+        "IAM Policy"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "El principio de mínimo privilegio establece que a cada usuario, grupo o servicio se le deben otorgar solo los permisos necesarios para realizar sus funciones específicas, nada más. Esto minimiza el impacto potencial de credenciales comprometidas o errores humanos, siendo una práctica fundamental de seguridad en AWS."
+      "explicacion": "Los roles de IAM se usan para otorgar permisos temporales a servicios o identidades sin compartir credenciales de largo plazo."
     },
     {
       "id": 4,
-      "pregunta": "¿Qué es la autenticación multifactor (MFA) en AWS y por qué se recomienda habilitarla en la cuenta root?",
+      "pregunta": "¿Qué práctica es recomendada para proteger la cuenta root de AWS?",
       "opciones": [
-        "Una capa adicional de seguridad que requiere un segundo factor de verificación además de la contraseña para acceder a la cuenta",
-        "Un servicio de análisis que verifica múltiples intentos de acceso fallidos y bloquea IPs sospechosas",
-        "Una política que obliga a los usuarios a cambiar sus contraseñas cada 30 días automáticamente",
-        "Un sistema de tokens de acceso temporal que reemplaza completamente las contraseñas tradicionales"
+        "Habilitar MFA y evitar usarla para tareas diarias",
+        "Usarla para todas las operaciones administrativas",
+        "Compartirla con el equipo de desarrollo",
+        "Asignarle claves de acceso para automatizaciones"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "MFA añade una capa extra de protección al requerir tanto la contraseña como un código generado por un dispositivo físico o aplicación (como Google Authenticator). Es especialmente crítico habilitarlo en la cuenta root, que tiene acceso completo a todos los recursos AWS y no puede ser restringida por políticas IAM."
+      "explicacion": "La cuenta root tiene acceso total a la cuenta AWS. Debe protegerse con MFA y usarse solo para tareas excepcionales."
     },
     {
       "id": 5,
-      "pregunta": "¿Para qué se usa el acceso federado (federated access) en AWS IAM?",
+      "pregunta": "¿Qué servicio de AWS permite cifrar datos y administrar claves de cifrado?",
       "opciones": [
-        "Permite a usuarios de sistemas de identidad externos (Active Directory, Google, etc.) acceder a AWS sin crear usuarios IAM individuales",
-        "Permite compartir recursos entre múltiples cuentas AWS de forma automática",
-        "Proporciona acceso temporal a recursos AWS para aplicaciones móviles sin credenciales permanentes",
-        "Sincroniza automáticamente los usuarios de AWS IAM con directorios LDAP corporativos"
+        "AWS Key Management Service (KMS)",
+        "AWS Shield",
+        "Amazon GuardDuty",
+        "AWS Artifact"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "El acceso federado permite a los usuarios autenticados en sistemas externos de identidad (como Microsoft Active Directory, Okta u otros proveedores SAML 2.0 u OpenID Connect) asumir roles IAM y acceder a recursos AWS. Esto elimina la necesidad de crear usuarios IAM individuales para cada empleado corporativo."
+      "explicacion": "AWS KMS permite crear y administrar claves de cifrado usadas para proteger datos en varios servicios de AWS."
     },
     {
       "id": 6,
-      "pregunta": "¿Qué es AWS Key Management Service (KMS) y cuál es su función principal?",
+      "pregunta": "¿Qué servicio de AWS proporciona protección contra ataques DDoS?",
       "opciones": [
-        "Un servicio gestionado para crear, controlar y usar claves criptográficas para cifrar datos en AWS",
-        "Un servicio de gestión de contraseñas para almacenar y rotar credenciales de bases de datos",
-        "Un servicio de certificados SSL/TLS para proteger el tráfico de aplicaciones web",
-        "Un sistema de autenticación de dos factores basado en hardware para cuentas AWS"
+        "AWS Shield",
+        "AWS WAF",
+        "Amazon GuardDuty",
+        "Amazon Inspector"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "AWS KMS es un servicio gestionado que facilita la creación y el control de las claves de cifrado utilizadas para proteger los datos. Se integra con la mayoría de los servicios AWS (S3, EBS, RDS, Lambda, etc.) y permite gestionar el ciclo de vida de las claves, incluyendo rotación automática y auditoría de uso."
+      "explicacion": "AWS Shield protege aplicaciones contra ataques de denegación de servicio distribuido."
     },
     {
       "id": 7,
-      "pregunta": "¿Qué son las Customer Master Keys (CMKs) en AWS KMS?",
+      "pregunta": "¿Qué servicio ayuda a proteger aplicaciones web contra ataques como SQL injection o XSS?",
       "opciones": [
-        "Claves de cifrado lógicas en KMS usadas para proteger datos; pueden ser gestionadas por AWS o por el cliente",
-        "Contraseñas maestras de la cuenta root que controlan todo el acceso a AWS",
-        "Claves privadas de certificados SSL almacenadas de forma segura en Hardware Security Modules",
-        "Tokens de acceso temporal generados automáticamente para aplicaciones que usan servicios AWS"
+        "AWS WAF",
+        "AWS Shield",
+        "AWS KMS",
+        "AWS CloudTrail"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Las CMKs (Customer Master Keys), también llamadas KMS Keys, son claves de cifrado primarias en KMS. Pueden ser AWS Managed Keys (creadas y gestionadas automáticamente por AWS por servicio) o Customer Managed Keys (creadas y controladas por el cliente), ofreciendo mayor control sobre políticas de uso, rotación y auditoría."
+      "explicacion": "AWS WAF filtra y bloquea tráfico HTTP y HTTPS malicioso dirigido a aplicaciones web."
     },
     {
       "id": 8,
-      "pregunta": "¿Qué es el cifrado de sobre (envelope encryption) en AWS KMS?",
+      "pregunta": "¿Qué servicio utiliza machine learning para detectar actividades sospechosas en una cuenta AWS?",
       "opciones": [
-        "Una técnica donde los datos se cifran con una Data Encryption Key (DEK) que a su vez está cifrada con una CMK de KMS",
-        "Un método de cifrar múltiples archivos en un solo contenedor comprimido y cifrado",
-        "Un proceso de cifrar la misma información con múltiples claves para mayor seguridad",
-        "Una forma de envolver mensajes cifrados en correos electrónicos usando estándares S/MIME"
+        "Amazon GuardDuty",
+        "AWS Artifact",
+        "AWS IAM",
+        "Amazon Cognito"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "El cifrado de sobre es una técnica donde los datos se cifran localmente con una clave de datos (Data Encryption Key o DEK), y esa DEK es a su vez cifrada con la CMK de KMS. Esto es eficiente porque KMS no necesita manejar grandes volúmenes de datos directamente; solo maneja las DEKs que son pequeñas."
+      "explicacion": "Amazon GuardDuty analiza eventos y logs para identificar comportamientos sospechosos y amenazas potenciales."
     },
     {
       "id": 9,
-      "pregunta": "¿Con qué servicios de AWS se integra AWS KMS para proporcionar cifrado?",
+      "pregunta": "¿Qué servicio evalúa automáticamente cargas de trabajo en busca de vulnerabilidades?",
       "opciones": [
-        "Amazon S3, EBS, RDS, Redshift, Lambda, Secrets Manager, CloudTrail y muchos más servicios AWS",
-        "Solo con Amazon S3 y Amazon EBS para cifrado de almacenamiento",
-        "Únicamente con servicios de bases de datos como RDS, DynamoDB y Redshift",
-        "Solo con servicios de red como VPC y Direct Connect para cifrado en tránsito"
+        "Amazon Inspector",
+        "AWS Shield",
+        "Amazon Route 53",
+        "AWS Budgets"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "AWS KMS se integra con una amplia variedad de servicios AWS incluyendo S3, EBS, RDS, Redshift, DynamoDB, Lambda, Secrets Manager, CloudTrail, SNS y muchos más. Esta integración profunda permite habilitar cifrado en reposo fácilmente en prácticamente cualquier servicio AWS con solo seleccionar la clave KMS deseada."
+      "explicacion": "Amazon Inspector ayuda a identificar vulnerabilidades y debilidades de seguridad en cargas de trabajo."
     },
     {
       "id": 10,
-      "pregunta": "¿Qué opciones de gestión de claves ofrece AWS KMS al cliente?",
+      "pregunta": "¿Qué servicio proporciona autenticación para aplicaciones web y móviles?",
       "opciones": [
-        "AWS Managed Keys (gestionadas por AWS automáticamente) y Customer Managed Keys (creadas y controladas por el cliente)",
-        "Solo claves gestionadas por AWS sin opción de personalización por el cliente",
-        "Solo claves del cliente importadas desde hardware externo (BYOK - Bring Your Own Key)",
-        "Claves compartidas entre múltiples cuentas AWS dentro de una organización"
+        "Amazon Cognito",
+        "AWS IAM",
+        "AWS Organizations",
+        "Amazon Route 53"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "KMS ofrece tres tipos: AWS Owned Keys (gratuitas, completamente gestionadas por AWS, sin visibilidad del cliente), AWS Managed Keys (creadas en la cuenta del cliente pero gestionadas por AWS por servicio, con auditoría disponible) y Customer Managed Keys (creadas y controladas completamente por el cliente, con mayor flexibilidad en políticas y rotación)."
-    },
-    {
-      "id": 11,
-      "pregunta": "¿Qué es Amazon GuardDuty y cómo detecta amenazas?",
-      "opciones": [
-        "Un servicio de detección de amenazas inteligente que usa machine learning para analizar logs de AWS en busca de actividad maliciosa",
-        "Un servicio de firewall de aplicaciones web que bloquea ataques SQL injection y XSS en tiempo real",
-        "Un scanner de vulnerabilidades que analiza el código fuente de aplicaciones en busca de fallos de seguridad",
-        "Un servicio de monitoreo de red que captura y analiza el tráfico de paquetes para detectar intrusiones"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "Amazon GuardDuty es un servicio de detección de amenazas inteligente que monitorea continuamente la actividad maliciosa y el comportamiento no autorizado usando machine learning, detección de anomalías e inteligencia de amenazas integrada. Analiza múltiples fuentes de datos de AWS para identificar amenazas potenciales."
-    },
-    {
-      "id": 12,
-      "pregunta": "¿Qué fuentes de datos analiza Amazon GuardDuty para detectar amenazas?",
-      "opciones": [
-        "AWS CloudTrail (llamadas API), VPC Flow Logs (tráfico de red) y registros DNS (consultas de resolución de nombres)",
-        "Solo los logs de aplicaciones almacenados en Amazon S3 y CloudWatch Logs",
-        "Únicamente el tráfico de red entre instancias EC2 dentro de una VPC",
-        "Solo los eventos de inicio de sesión de usuarios en la Consola de Administración de AWS"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "GuardDuty analiza tres fuentes de datos principales: AWS CloudTrail Events (para detectar llamadas API sospechosas), VPC Flow Logs (para identificar tráfico de red anómalo como comunicaciones con IPs maliciosas conocidas) y DNS Logs (para detectar consultas a dominios maliciosos). No requiere instalar agentes ni habilitar estas fuentes manualmente."
-    },
-    {
-      "id": 13,
-      "pregunta": "¿Qué es un 'finding' en Amazon GuardDuty?",
-      "opciones": [
-        "Una alerta de seguridad que describe una actividad potencialmente maliciosa o no autorizada detectada en la cuenta AWS",
-        "Un reporte mensual de cumplimiento sobre el estado de seguridad de la cuenta AWS",
-        "Una recomendación automática para mejorar la configuración de seguridad de los recursos",
-        "Un registro de auditoría de todas las acciones realizadas por usuarios IAM en la cuenta"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "Un finding de GuardDuty es una notificación de que se detectó una actividad potencialmente peligrosa. Incluye detalles como el tipo de amenaza, la gravedad (baja, media, alta), el recurso afectado, la hora del evento y la información del actor. Los findings pueden generar alertas en CloudWatch Events y notificaciones en SNS."
-    },
-    {
-      "id": 14,
-      "pregunta": "¿Requiere Amazon GuardDuty la instalación de agentes o la modificación de la infraestructura existente?",
-      "opciones": [
-        "No, GuardDuty se activa con un clic sin necesidad de instalar agentes ni modificar la infraestructura",
-        "Sí, requiere instalar un agente en cada instancia EC2 para monitorear el tráfico de red",
-        "Sí, requiere configurar VPC Flow Logs y CloudTrail manualmente antes de habilitarlo",
-        "No requiere agentes pero sí modificar las políticas IAM de todos los recursos monitoreados"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "Amazon GuardDuty es completamente no intrusivo. Se activa con un solo clic en la consola AWS o mediante API, y comienza a analizar los flujos de datos automáticamente. No requiere instalar ningún agente, no impacta el rendimiento de los workloads existentes y no requiere cambios en la configuración de red ni en las aplicaciones."
-    },
-    {
-      "id": 15,
-      "pregunta": "Una empresa detecta un finding de GuardDuty indicando que una instancia EC2 está comunicándose con una dirección IP maliciosa conocida. ¿Cuál es la acción más apropiada?",
-      "opciones": [
-        "Aislar la instancia modificando su Security Group, investigar el compromise y tomar acciones de remediación",
-        "Ignorar el finding si la instancia EC2 sigue funcionando correctamente sin impacto visible",
-        "Desactivar GuardDuty para ese recurso específico para evitar falsos positivos futuros",
-        "Aumentar el límite de rate de las llamadas API para que GuardDuty tenga más datos de análisis"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "Al detectar comunicación con IPs maliciosas, la instancia puede estar comprometida. La respuesta correcta es aislarla inmediatamente (restringiendo sus reglas de Security Group), preservar la evidencia forense, investigar cómo ocurrió el compromise y, si se confirma, terminar la instancia y lanzar una nueva desde una AMI limpia."
-    },
-    {
-      "id": 16,
-      "pregunta": "¿Qué es AWS Shield y contra qué tipo de ataques protege?",
-      "opciones": [
-        "Un servicio de protección contra ataques DDoS (Distributed Denial of Service) que protege aplicaciones en AWS",
-        "Un servicio de firewall de aplicaciones web que filtra tráfico HTTP malicioso como SQL injection",
-        "Un servicio de cifrado que protege los datos almacenados en AWS contra acceso no autorizado",
-        "Un servicio de detección de intrusiones que monitorea el tráfico de red dentro de una VPC"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "AWS Shield es un servicio gestionado de protección contra ataques DDoS que defiende las aplicaciones en AWS. Los ataques DDoS intentan hacer que una aplicación no esté disponible inundándola con tráfico. Shield proporciona detección y mitigación automática para proteger la disponibilidad de las aplicaciones."
-    },
-    {
-      "id": 17,
-      "pregunta": "¿Cuál es la diferencia entre AWS Shield Standard y AWS Shield Advanced?",
-      "opciones": [
-        "Shield Standard es gratuito y automático para todos; Shield Advanced es de pago y ofrece protección adicional con soporte 24/7 del equipo DRT de AWS",
-        "Shield Standard solo protege aplicaciones web; Shield Advanced protege cualquier servicio AWS",
-        "Shield Standard requiere configuración manual; Shield Advanced se activa automáticamente",
-        "Shield Advanced solo está disponible para cuentas Enterprise; Shield Standard para todas las cuentas"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "AWS Shield Standard está habilitado automáticamente sin costo adicional para todos los clientes de AWS, proporcionando protección contra ataques DDoS más comunes en capas 3 y 4. Shield Advanced es un servicio de pago que proporciona protección mejorada contra ataques más sofisticados, acceso al equipo DRT (DDoS Response Team) 24/7 y protección de costos contra escalado por DDoS."
-    },
-    {
-      "id": 18,
-      "pregunta": "¿Qué recursos de AWS protege AWS Shield Advanced?",
-      "opciones": [
-        "Amazon EC2, Elastic Load Balancing, Amazon CloudFront, AWS Global Accelerator y Amazon Route 53",
-        "Solo instancias Amazon EC2 y balanceadores de carga",
-        "Únicamente aplicaciones detrás de Amazon CloudFront",
-        "Solo servicios de base de datos como RDS y DynamoDB"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "AWS Shield Advanced proporciona protección DDoS ampliada para recursos específicos: instancias Amazon EC2, Elastic Load Balancers (ELB), distribuciones Amazon CloudFront, zonas alojadas de Amazon Route 53 y AWS Global Accelerator. Para cada uno de estos recursos, Shield Advanced puede detectar y mitigar ataques DDoS más sofisticados."
-    },
-    {
-      "id": 19,
-      "pregunta": "¿Cómo se integra AWS Shield con AWS WAF para mejorar la protección?",
-      "opciones": [
-        "Shield detecta ataques DDoS volumétricos a nivel de red; WAF filtra tráfico malicioso HTTP/HTTPS a nivel de aplicación, trabajando juntos en capas complementarias",
-        "WAF reemplaza a Shield cuando está habilitado, proporcionando protección completa en una sola capa",
-        "Shield requiere que WAF esté configurado como prerequisito para funcionar correctamente",
-        "Solo Shield Advanced puede integrarse con WAF; Shield Standard no soporta esta integración"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "Shield y WAF son servicios complementarios. Shield protege principalmente contra ataques DDoS volumétricos en capas de red y transporte (capas 3 y 4). AWS WAF protege las aplicaciones web contra ataques en la capa de aplicación (capa 7) como SQL injection, XSS y bots maliciosos. Usados juntos proporcionan defensa en profundidad."
-    },
-    {
-      "id": 20,
-      "pregunta": "¿Qué beneficio adicional proporciona AWS Shield Advanced en caso de un ataque DDoS exitoso que genere cargos adicionales?",
-      "opciones": [
-        "Protección de costos: AWS proporciona créditos para cubrir los cargos adicionales generados por el escalado causado por el ataque DDoS",
-        "AWS elimina automáticamente todos los cargos del mes en que ocurre el ataque",
-        "AWS garantiza tiempo de actividad del 100% y paga una compensación si el servicio se interrumpe",
-        "Los clientes de Shield Advanced no pagan por ningún recurso adicional sin importar el origen del tráfico"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "Una ventaja única de AWS Shield Advanced es la protección de costos ante DDoS. Si un ataque DDoS provoca un escalado automático de recursos (más instancias EC2, mayor transferencia de datos) generando cargos adicionales, AWS puede proporcionar créditos de servicio para cubrir esos costos adicionales causados directamente por el ataque."
+      "explicacion": "Amazon Cognito permite gestionar registro, inicio de sesión y autenticación de usuarios en aplicaciones."
     }
   ]
 }

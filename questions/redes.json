@@ -1,245 +1,125 @@
 {
-  "categoria": "Redes y Conectividad",
+  "categoria": "Redes",
   "preguntas": [
     {
       "id": 1,
-      "pregunta": "¿Qué es Amazon VPC (Virtual Private Cloud) y para qué se utiliza?",
+      "pregunta": "¿Qué servicio de AWS permite crear una red privada virtual aislada dentro de la nube?",
       "opciones": [
-        "Una red virtual aislada dentro de la nube de AWS donde se pueden lanzar recursos de AWS",
-        "Un servicio de VPN dedicado para conectar oficinas remotas a AWS",
-        "Un servicio de balanceo de carga para distribuir tráfico entre regiones",
-        "Una red de distribución de contenido para entregar datos con baja latencia"
+        "Amazon VPC",
+        "Amazon Route 53",
+        "AWS Direct Connect",
+        "Amazon CloudFront"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Amazon VPC permite crear una red virtual aislada lógicamente en la nube de AWS, similar a una red tradicional en un centro de datos. Dentro de una VPC se pueden lanzar recursos AWS como instancias EC2, controlar el enrutamiento del tráfico, configurar tablas de rutas y gestionar la conectividad de red de forma completa."
+      "explicacion": "Amazon VPC permite crear una red virtual aislada donde se pueden lanzar recursos como instancias EC2 con control total de direccionamiento IP, subredes y reglas de seguridad."
     },
     {
       "id": 2,
-      "pregunta": "¿Cuál es la diferencia principal entre una subred pública y una subred privada en una VPC?",
+      "pregunta": "¿Qué servicio de AWS se utiliza para administrar DNS y dirigir tráfico hacia recursos en AWS?",
       "opciones": [
-        "Una subred pública tiene acceso directo a internet mediante un Internet Gateway; una privada no tiene acceso directo a internet",
-        "Una subred pública es más rápida que una privada al tener conexión directa con los servidores de AWS",
-        "Una subred pública permite más instancias que una privada por sus rangos de IP más amplios",
-        "Una subred privada no puede comunicarse con otras subredes dentro de la misma VPC"
+        "Amazon Route 53",
+        "Amazon VPC",
+        "Amazon CloudFront",
+        "AWS Shield"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "La diferencia clave es la conectividad a internet: una subred pública tiene una tabla de rutas con una ruta al Internet Gateway (IGW), permitiendo comunicación directa con internet. Una subred privada no tiene esta ruta directa, lo que la hace adecuada para recursos que no deben ser accesibles desde internet, como bases de datos y servidores de aplicaciones."
+      "explicacion": "Amazon Route 53 es el servicio de DNS administrado de AWS que permite enrutar tráfico a aplicaciones en AWS o fuera de AWS."
     },
     {
       "id": 3,
-      "pregunta": "¿Qué es un Security Group en AWS y cuál es su característica principal?",
+      "pregunta": "¿Qué servicio de AWS distribuye contenido globalmente usando una red de edge locations?",
       "opciones": [
-        "Un firewall virtual a nivel de instancia que controla el tráfico entrante y saliente, y es stateful",
-        "Un firewall a nivel de subred que aplica reglas tanto de entrada como de salida de forma independiente",
-        "Un grupo de políticas IAM que controla el acceso de usuarios a recursos de red",
-        "Una lista de IPs permitidas para acceder a un bucket de S3 de forma pública"
+        "Amazon CloudFront",
+        "Amazon VPC",
+        "AWS Direct Connect",
+        "Elastic Load Balancing"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Un Security Group actúa como firewall virtual para instancias EC2, controlando el tráfico entrante (inbound) y saliente (outbound). Es stateful, lo que significa que si se permite el tráfico entrante, la respuesta saliente se permite automáticamente sin necesitar regla explícita. Solo soporta reglas de permiso, no de denegación."
+      "explicacion": "Amazon CloudFront es la red de entrega de contenido (CDN) de AWS que distribuye contenido desde ubicaciones cercanas a los usuarios finales."
     },
     {
       "id": 4,
-      "pregunta": "¿Cuál es la diferencia entre Security Groups y Network ACLs (NACLs) en una VPC?",
+      "pregunta": "¿Qué servicio de AWS distribuye automáticamente el tráfico entre múltiples instancias para mejorar disponibilidad?",
       "opciones": [
-        "Los Security Groups operan a nivel de instancia y son stateful; los NACLs operan a nivel de subred y son stateless",
-        "Los NACLs son más seguros que los Security Groups porque aplican reglas en ambas direcciones",
-        "Los Security Groups solo controlan tráfico entrante; los NACLs solo controlan tráfico saliente",
-        "Los NACLs solo se aplican a instancias Windows; los Security Groups a instancias Linux"
+        "Elastic Load Balancing",
+        "Amazon Route 53",
+        "Amazon S3",
+        "AWS Lambda"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Security Groups operan a nivel de instancia individual y son stateful (el tráfico de retorno se permite automáticamente). Los NACLs operan a nivel de subred y son stateless (requieren reglas explícitas para tráfico entrante Y saliente). Los NACLs también soportan reglas de denegación explícita, a diferencia de los Security Groups."
+      "explicacion": "Elastic Load Balancing distribuye automáticamente el tráfico de entrada entre múltiples recursos para mejorar disponibilidad y tolerancia a fallos."
     },
     {
       "id": 5,
-      "pregunta": "¿Para qué se usa un NAT Gateway en una VPC y dónde se debe ubicar?",
+      "pregunta": "¿Qué servicio permite conectar una red on-premises con AWS mediante una conexión dedicada privada?",
       "opciones": [
-        "Permite que instancias en subredes privadas accedan a internet sin exponer sus IPs; se ubica en una subred pública",
-        "Permite que usuarios de internet accedan a instancias en subredes privadas de forma segura",
-        "Conecta dos VPCs diferentes para permitir comunicación entre recursos de distintas VPCs",
-        "Proporciona DNS resolution para instancias dentro de la VPC hacia dominios externos"
+        "AWS Direct Connect",
+        "Amazon CloudFront",
+        "AWS Lambda",
+        "Amazon Route 53"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "El NAT Gateway permite que instancias en subredes privadas inicien conexiones de salida hacia internet (para actualizaciones de software, por ejemplo) sin que recursos externos puedan iniciar conexiones hacia esas instancias. Se debe ubicar en una subred pública y las subredes privadas deben tener una ruta hacia él."
+      "explicacion": "AWS Direct Connect establece una conexión de red dedicada entre el datacenter del cliente y AWS."
     },
     {
       "id": 6,
-      "pregunta": "¿Qué es Amazon CloudFront y cuál es su función principal?",
+      "pregunta": "¿Qué opción permite conectar una red on-premises con AWS usando internet de forma segura?",
       "opciones": [
-        "Una red de distribución de contenido (CDN) que entrega contenido con baja latencia desde ubicaciones de borde globales",
-        "Un servicio de DNS gestionado para enrutar tráfico de usuarios hacia los recursos más cercanos",
-        "Un balanceador de carga global que distribuye tráfico entre instancias EC2 en múltiples regiones",
-        "Un servicio de almacenamiento en caché para bases de datos que reduce la latencia de consultas"
+        "AWS VPN",
+        "Amazon VPC Peering",
+        "Amazon CloudFront",
+        "AWS WAF"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Amazon CloudFront es una CDN (Content Delivery Network) que distribuye contenido estático y dinámico desde más de 400 ubicaciones de borde (Edge Locations) alrededor del mundo. Reduce la latencia al servir el contenido desde el punto de presencia más cercano al usuario final."
+      "explicacion": "AWS VPN permite conectar redes locales con AWS a través de internet usando túneles cifrados."
     },
     {
       "id": 7,
-      "pregunta": "¿Qué son las Edge Locations de Amazon CloudFront?",
+      "pregunta": "¿Qué componente de Amazon VPC permite dividir una red en segmentos más pequeños?",
       "opciones": [
-        "Centros de datos distribuidos globalmente donde CloudFront almacena copias en caché del contenido para entrega rápida",
-        "Regiones AWS adicionales de menor capacidad para cargas de trabajo secundarias",
-        "Puntos de conexión VPN distribuidos globalmente para conexiones seguras de usuarios remotos",
-        "Servidores DNS distribuidos que resuelven nombres de dominio de forma local para reducir latencia"
+        "Subnets",
+        "Security Groups",
+        "Route Tables",
+        "Gateways"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Las Edge Locations son centros de datos distribuidos globalmente (más de 400) donde CloudFront almacena en caché copias del contenido. Cuando un usuario solicita contenido, CloudFront lo sirve desde la Edge Location más cercana, reduciendo significativamente la latencia comparado con servir desde el origen."
+      "explicacion": "Las subnets permiten dividir una VPC en segmentos más pequeños y aislar recursos dentro de la red."
     },
     {
       "id": 8,
-      "pregunta": "¿Qué es el Origin Access Identity (OAI) en Amazon CloudFront y para qué se usa?",
+      "pregunta": "¿Qué característica de seguridad controla el tráfico entrante y saliente a nivel de instancia EC2?",
       "opciones": [
-        "Una identidad especial que permite a CloudFront acceder a contenido privado en S3, evitando acceso directo al bucket",
-        "Un certificado SSL que CloudFront usa para establecer conexiones HTTPS con los usuarios finales",
-        "Un token de autenticación que los usuarios deben presentar para acceder a contenido distribuido por CloudFront",
-        "Una política de caché que determina cuánto tiempo CloudFront retiene el contenido en las Edge Locations"
+        "Security Groups",
+        "Network ACL",
+        "IAM Policies",
+        "Route Tables"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "El OAI (Origin Access Identity) es una identidad especial de CloudFront que permite restringir el acceso a un bucket S3 solo a través de CloudFront. Al configurar el bucket para aceptar solo solicitudes del OAI, se evita que los usuarios accedan directamente al bucket, forzando todo el tráfico a pasar por CloudFront."
+      "explicacion": "Los Security Groups funcionan como un firewall virtual que controla el tráfico hacia instancias EC2."
     },
     {
       "id": 9,
-      "pregunta": "¿Qué tipos de contenido puede distribuir Amazon CloudFront?",
+      "pregunta": "¿Qué componente de VPC funciona como una capa adicional de seguridad a nivel de subred?",
       "opciones": [
-        "Contenido estático (imágenes, CSS, JS), contenido dinámico, streaming de video y APIs",
-        "Solo contenido estático como imágenes, videos y archivos HTML",
-        "Solo archivos de gran tamaño como videos e instaladores de software",
-        "Únicamente contenido cifrado con SSL/TLS desde orígenes HTTP"
+        "Network ACL",
+        "Security Groups",
+        "Elastic IP",
+        "Route 53"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "CloudFront puede distribuir tanto contenido estático (archivos HTML, CSS, JavaScript, imágenes) como contenido dinámico generado por aplicaciones, streaming de video en vivo y bajo demanda, y también puede actuar como proxy inverso para APIs, mejorando el rendimiento y la seguridad."
+      "explicacion": "Las Network ACL actúan como una capa adicional de seguridad que controla el tráfico en el nivel de subred."
     },
     {
       "id": 10,
-      "pregunta": "Una empresa quiere proteger su aplicación web de ataques y servir contenido globalmente con baja latencia. ¿Qué combinación de servicios AWS es más adecuada?",
+      "pregunta": "Una empresa quiere mejorar la latencia para usuarios globales al acceder a contenido web estático. ¿Qué servicio debería usar?",
       "opciones": [
-        "Amazon CloudFront con AWS WAF para protección de aplicaciones web y distribución global",
-        "Amazon Route 53 con AWS Shield Standard para enrutamiento geográfico y protección DDoS",
-        "Elastic Load Balancer en múltiples regiones con Security Groups para control de tráfico",
-        "Amazon S3 con políticas de bucket públicas para distribución de contenido estático"
+        "Amazon CloudFront",
+        "Amazon EC2",
+        "AWS Direct Connect",
+        "Amazon RDS"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "La combinación de CloudFront (CDN global para baja latencia) con AWS WAF (Web Application Firewall para protección contra ataques como SQL injection y XSS) es la solución óptima. CloudFront puede integrarse directamente con WAF para aplicar reglas de seguridad en las Edge Locations, cerca del usuario."
-    },
-    {
-      "id": 11,
-      "pregunta": "¿Qué es Amazon Route 53 y qué servicios proporciona?",
-      "opciones": [
-        "Un servicio DNS altamente disponible y escalable que también ofrece registro de dominios y health checks",
-        "Un servicio de balanceo de carga global que distribuye tráfico entre múltiples regiones AWS",
-        "Un servicio de monitoreo de red que detecta y alerta sobre problemas de conectividad",
-        "Un servicio de firewall para filtrar tráfico DNS malicioso y proteger aplicaciones web"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "Amazon Route 53 es un servicio DNS (Domain Name System) web altamente disponible y escalable. Proporciona tres funciones principales: registro de nombres de dominio, enrutamiento de tráfico DNS con múltiples políticas de enrutamiento, y verificación del estado de los recursos (health checks)."
-    },
-    {
-      "id": 12,
-      "pregunta": "¿Qué hace la política de enrutamiento Failover de Route 53?",
-      "opciones": [
-        "Dirige el tráfico al recurso primario cuando está healthy; si falla, redirige automáticamente al recurso secundario",
-        "Distribuye el tráfico entre múltiples recursos según pesos porcentuales configurados",
-        "Enruta a los usuarios al recurso con menor latencia de red desde su ubicación",
-        "Dirige el tráfico según la ubicación geográfica del usuario final"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "La política de enrutamiento Failover configura activamente un recurso primario y uno secundario. Route 53 monitorea el estado del recurso primario mediante health checks y, cuando detecta que el primario no está disponible, redirige automáticamente todo el tráfico al recurso secundario, proporcionando alta disponibilidad."
-    },
-    {
-      "id": 13,
-      "pregunta": "¿Qué hace la política de enrutamiento Geolocation en Route 53?",
-      "opciones": [
-        "Dirige el tráfico a recursos específicos basándose en la ubicación geográfica de donde proviene la solicitud DNS",
-        "Enruta a los usuarios al recurso con menor latencia de red calculando la distancia física",
-        "Distribuye el tráfico proporcionalmente entre recursos según su ubicación en diferentes regiones",
-        "Redirige automáticamente el tráfico a la región más cercana en caso de fallo del recurso principal"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "La política de enrutamiento Geolocation permite dirigir el tráfico a diferentes recursos según el continente, país o estado/provincia de origen de la solicitud. Esto es útil para servir contenido localizado, cumplir restricciones legales por región o dirigir usuarios a servidores con datos en su idioma."
-    },
-    {
-      "id": 14,
-      "pregunta": "¿Qué es un Health Check en Amazon Route 53 y qué permite hacer?",
-      "opciones": [
-        "Una verificación automática del estado de los endpoints que permite enrutamiento basado en disponibilidad",
-        "Una auditoría mensual del rendimiento DNS para optimizar tiempos de resolución de nombres",
-        "Una herramienta para verificar si los certificados SSL de los dominios están correctamente configurados",
-        "Un análisis del tráfico DNS para detectar patrones de uso y optimizar la distribución"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "Los Health Checks de Route 53 monitorean continuamente el estado y la disponibilidad de los recursos (como endpoints web, servidores o aplicaciones). Cuando un endpoint falla el health check, Route 53 puede dejar de enrutar tráfico hacia ese recurso automáticamente, lo que habilita el failover automático."
-    },
-    {
-      "id": 15,
-      "pregunta": "¿Qué política de enrutamiento de Route 53 distribuye el tráfico entre múltiples recursos según porcentajes configurados?",
-      "opciones": [
-        "Weighted Routing (enrutamiento ponderado)",
-        "Latency-Based Routing (enrutamiento por latencia)",
-        "Geolocation Routing (enrutamiento geográfico)",
-        "Multivalue Answer Routing (respuesta de múltiples valores)"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "La política de enrutamiento Weighted (ponderado) permite asignar pesos a múltiples recursos para controlar qué proporción del tráfico recibe cada uno. Por ejemplo, enviar el 90% del tráfico a la versión estable de una aplicación y el 10% a una nueva versión para pruebas (canary deployment)."
-    },
-    {
-      "id": 16,
-      "pregunta": "¿Qué es AWS Site-to-Site VPN y qué tipo de conexión establece?",
-      "opciones": [
-        "Una conexión VPN cifrada sobre internet público que conecta la red on-premises de una empresa con su VPC en AWS",
-        "Una conexión de fibra dedicada de alta velocidad entre el centro de datos corporativo y AWS",
-        "Un túnel seguro entre dos VPCs de AWS en diferentes regiones para comunicación privada",
-        "Una conexión privada entre instancias EC2 y servicios AWS sin pasar por internet público"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "AWS Site-to-Site VPN crea una conexión IPSec cifrada sobre internet público entre la red on-premises de una empresa y su VPC en AWS. Aunque usa internet público, el tráfico viaja cifrado, proporcionando una extensión segura de la red corporativa hacia la nube."
-    },
-    {
-      "id": 17,
-      "pregunta": "¿Qué es el Virtual Private Gateway (VGW) en una conexión Site-to-Site VPN?",
-      "opciones": [
-        "El componente del lado de AWS de la conexión VPN que se adjunta a la VPC",
-        "El dispositivo VPN ubicado en las instalaciones del cliente para terminar el túnel VPN",
-        "Un servicio de enrutamiento global que conecta múltiples VPCs con la red on-premises",
-        "Un gateway de internet dedicado para conexiones VPN de alto rendimiento"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "El Virtual Private Gateway (VGW) es el concentrador VPN del lado de AWS. Se adjunta a la VPC y actúa como el punto de terminación del túnel VPN en el lado de AWS. Es el par del Customer Gateway que está en las instalaciones del cliente."
-    },
-    {
-      "id": 18,
-      "pregunta": "¿Qué es el Customer Gateway (CGW) en una conexión Site-to-Site VPN?",
-      "opciones": [
-        "El dispositivo físico o software VPN ubicado en las instalaciones del cliente que termina el túnel VPN",
-        "El componente de AWS que gestiona las conexiones VPN entrantes desde clientes remotos",
-        "Un gateway de API para exponer servicios internos de la empresa de forma segura",
-        "Un router virtual en la nube que enruta el tráfico entre la VPN y los recursos AWS"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "El Customer Gateway (CGW) representa el dispositivo VPN del lado del cliente (puede ser un dispositivo físico como un router Cisco/Juniper o software VPN). En AWS se crea un recurso CGW que contiene la información del dispositivo del cliente, como su dirección IP pública, para establecer el túnel."
-    },
-    {
-      "id": 19,
-      "pregunta": "¿Cuál es la principal diferencia entre AWS Site-to-Site VPN y AWS Direct Connect?",
-      "opciones": [
-        "VPN usa internet público con cifrado (menor costo, mayor latencia); Direct Connect usa conexión de red dedicada privada (mayor costo, menor latencia y mayor ancho de banda)",
-        "VPN es más rápido y confiable que Direct Connect para todas las cargas de trabajo",
-        "Direct Connect es una solución VPN más avanzada que Site-to-Site VPN",
-        "Ambas son equivalentes en rendimiento pero Direct Connect es más económico para grandes volúmenes de datos"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "Site-to-Site VPN establece conexiones cifradas sobre internet público, siendo rápida de implementar y económica, pero con latencia variable. AWS Direct Connect proporciona una conexión de red dedicada privada desde las instalaciones del cliente hasta AWS, ofreciendo menor latencia, mayor ancho de banda consistente y mayor confiabilidad, a un costo superior."
-    },
-    {
-      "id": 20,
-      "pregunta": "¿Cuántos túneles IPSec crea una conexión AWS Site-to-Site VPN por defecto y por qué?",
-      "opciones": [
-        "Dos túneles IPSec redundantes para garantizar alta disponibilidad de la conexión VPN",
-        "Un solo túnel IPSec para simplificar la configuración y reducir costos",
-        "Cuatro túneles IPSec distribuidos entre zonas de disponibilidad para máxima redundancia",
-        "El número de túneles es configurable entre 1 y 10 según las necesidades"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "Cada conexión AWS Site-to-Site VPN crea automáticamente dos túneles IPSec en diferentes endpoints de AWS. Esta redundancia integrada garantiza alta disponibilidad: si un túnel experimenta problemas, el tráfico conmuta automáticamente al segundo túnel sin interrupción del servicio."
+      "explicacion": "Amazon CloudFront distribuye contenido globalmente a través de edge locations cercanas a los usuarios."
     }
   ]
 }

@@ -1,125 +1,125 @@
 {
-  "categoria": "Integración de Aplicaciones",
+  "categoria": "Integracion",
   "preguntas": [
     {
       "id": 1,
-      "pregunta": "¿Qué es Amazon SNS (Simple Notification Service) y qué modelo de mensajería implementa?",
+      "pregunta": "¿Qué servicio de AWS permite desacoplar aplicaciones mediante colas de mensajes?",
       "opciones": [
-        "Un servicio de mensajería que implementa el modelo pub/sub (publicación/suscripción) para enviar mensajes a múltiples suscriptores simultáneamente",
-        "Un servicio de colas de mensajes que garantiza el procesamiento ordenado de mensajes uno a uno",
-        "Un servicio de email transaccional para enviar notificaciones personalizadas a usuarios finales",
-        "Un servicio de streaming de datos en tiempo real para procesar millones de eventos por segundo"
+        "Amazon SQS",
+        "Amazon SNS",
+        "AWS Lambda",
+        "Amazon CloudWatch"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Amazon SNS implementa el modelo de mensajería pub/sub (publicador/suscriptor). Los publicadores envían mensajes a un Topic (tema), y SNS distribuye automáticamente ese mensaje a todos los suscriptores registrados en ese topic. Un mensaje se puede entregar simultáneamente a múltiples destinos diferentes."
+      "explicacion": "Amazon SQS es un servicio de colas de mensajes que permite desacoplar componentes de aplicaciones distribuidas."
     },
     {
       "id": 2,
-      "pregunta": "¿Qué es el patrón fan-out con Amazon SNS y para qué se usa?",
+      "pregunta": "¿Qué servicio de AWS permite enviar notificaciones a múltiples suscriptores mediante el modelo publish/subscribe?",
       "opciones": [
-        "Un patrón donde un mensaje publicado en un topic SNS se entrega simultáneamente a múltiples colas SQS u otros suscriptores para procesamiento paralelo",
-        "Una técnica para distribuir la carga de mensajes entre múltiples instancias EC2 de forma equitativa",
-        "Un método para replicar mensajes entre múltiples regiones AWS para alta disponibilidad",
-        "Una estrategia para comprimir mensajes grandes en múltiples partes más pequeñas para entrega eficiente"
+        "Amazon SNS",
+        "Amazon SQS",
+        "AWS Step Functions",
+        "Amazon EC2"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "El patrón fan-out permite que un evento o mensaje sea procesado por múltiples sistemas en paralelo. Por ejemplo, cuando se sube una imagen a S3, puede publicarse un evento en SNS que simultáneamente notifica: una cola SQS para procesar la imagen, otra cola SQS para actualizar la base de datos, y una función Lambda para enviar notificación al usuario. Todo ocurre en paralelo."
+      "explicacion": "Amazon SNS utiliza el modelo pub/sub para enviar mensajes o notificaciones a múltiples suscriptores."
     },
     {
       "id": 3,
-      "pregunta": "¿Qué tipos de suscriptores (endpoints) soporta Amazon SNS para entregar mensajes?",
+      "pregunta": "¿Qué servicio de AWS permite crear APIs REST o HTTP para exponer servicios backend?",
       "opciones": [
-        "Email, SMS, AWS Lambda, Amazon SQS, HTTP/HTTPS endpoints y aplicaciones móviles (push notifications)",
-        "Solo email y SMS para notificaciones a usuarios finales",
-        "Únicamente funciones AWS Lambda y colas Amazon SQS",
-        "Solo endpoints HTTP/HTTPS de aplicaciones web"
+        "Amazon API Gateway",
+        "Amazon CloudFront",
+        "Amazon Route 53",
+        "Amazon S3"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Amazon SNS puede entregar mensajes a múltiples tipos de endpoints: Email (notificaciones a personas), SMS (mensajes de texto a teléfonos móviles), AWS Lambda (procesamiento serverless), Amazon SQS (desacoplamiento de aplicaciones), HTTP/HTTPS (webhooks a aplicaciones externas), y notificaciones push móviles (Apple APNS, Google FCM, Amazon ADM)."
+      "explicacion": "Amazon API Gateway permite crear, publicar y administrar APIs que pueden integrarse con servicios como Lambda."
     },
     {
       "id": 4,
-      "pregunta": "¿Cuál es la diferencia entre los SNS Standard Topics y SNS FIFO Topics?",
+      "pregunta": "¿Qué servicio permite orquestar flujos de trabajo entre múltiples servicios AWS?",
       "opciones": [
-        "Standard Topics ofrecen mayor rendimiento pero pueden entregar mensajes fuera de orden o duplicados; FIFO Topics garantizan orden estricto y entrega exactamente una vez",
-        "Standard Topics solo soportan suscriptores email y SMS; FIFO Topics soportan Lambda y SQS",
-        "Standard Topics son gratuitos; FIFO Topics tienen costo por cada mensaje procesado",
-        "Standard Topics son para aplicaciones internas; FIFO Topics para comunicación con sistemas externos"
+        "AWS Step Functions",
+        "Amazon SNS",
+        "Amazon SQS",
+        "AWS CodeDeploy"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "SNS Standard Topics ofrecen máximo rendimiento (prácticamente ilimitado) pero con entrega best-effort: los mensajes pueden entregarse fuera de orden o más de una vez. Los FIFO Topics garantizan orden estricto First-In-First-Out y entrega exactamente una vez, siendo ideales para casos donde el orden y la deduplicación son críticos, como transacciones financieras."
+      "explicacion": "AWS Step Functions permite coordinar múltiples servicios en flujos de trabajo visuales."
     },
     {
       "id": 5,
-      "pregunta": "Una empresa quiere notificar a su equipo de operaciones por email y SMS, y también procesar el evento automáticamente con una función Lambda cuando una instancia EC2 cambia a estado 'stopped'. ¿Qué arquitectura es más adecuada?",
+      "pregunta": "¿Qué servicio permite crear arquitecturas basadas en eventos en AWS?",
       "opciones": [
-        "Configurar Amazon EventBridge para detectar el cambio de estado y publicar en un topic SNS con suscriptores de email, SMS y Lambda",
-        "Crear tres funciones Lambda independientes: una para email, una para SMS y otra para el procesamiento",
-        "Usar CloudWatch Alarms con tres acciones separadas para email, SMS y Lambda",
-        "Configurar un script en cron en una instancia EC2 siempre activa que monitoree los estados"
+        "Amazon EventBridge",
+        "Amazon CloudWatch",
+        "Amazon S3",
+        "AWS IAM"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "La arquitectura óptima usa EventBridge (para capturar el evento de cambio de estado de EC2) que publica en un Topic SNS. El Topic SNS tiene tres suscriptores: uno de email, uno de SMS y una función Lambda. Cuando ocurre el evento, los tres suscriptores reciben la notificación simultáneamente, demostrando el patrón fan-out de SNS."
+      "explicacion": "Amazon EventBridge permite enrutar eventos entre servicios AWS, aplicaciones SaaS y aplicaciones propias."
     },
     {
       "id": 6,
-      "pregunta": "¿Qué es Amazon SQS (Simple Queue Service) y para qué se usa principalmente?",
+      "pregunta": "¿Cuál es la principal diferencia entre Amazon SQS y Amazon SNS?",
       "opciones": [
-        "Un servicio de colas de mensajes totalmente gestionado que permite desacoplar y escalar microservicios, sistemas distribuidos y aplicaciones serverless",
-        "Un servicio de mensajería pub/sub para enviar notificaciones a múltiples suscriptores simultáneamente",
-        "Un servicio de streaming de datos en tiempo real para ingerir grandes volúmenes de eventos de IoT",
-        "Una base de datos de mensajes persistente para almacenar comunicaciones entre aplicaciones indefinidamente"
+        "SQS usa colas de mensajes y SNS usa el modelo publish/subscribe",
+        "SNS usa colas y SQS usa almacenamiento de objetos",
+        "SQS es un servicio de base de datos",
+        "SNS solo funciona con EC2"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Amazon SQS es un servicio de colas de mensajes que permite desacoplar componentes de aplicaciones. El productor envía mensajes a la cola y el consumidor los procesa de forma independiente. Esto permite que los componentes escalen independientemente, toleren fallos del consumidor (los mensajes persisten en la cola) y gestionen picos de tráfico."
+      "explicacion": "SQS almacena mensajes en colas mientras SNS envía mensajes a múltiples suscriptores mediante pub/sub."
     },
     {
       "id": 7,
-      "pregunta": "¿Cuál es la diferencia entre una Standard Queue y una FIFO Queue en Amazon SQS?",
+      "pregunta": "Una empresa necesita enviar notificaciones a múltiples aplicaciones cuando ocurre un evento. ¿Qué servicio debería usar?",
       "opciones": [
-        "Standard Queue ofrece rendimiento ilimitado pero sin garantía de orden ni exactamente una entrega; FIFO Queue garantiza orden estricto y entrega exactamente una vez con menor rendimiento",
-        "Standard Queue es más económica pero pierde mensajes ocasionalmente; FIFO Queue nunca pierde mensajes",
-        "Standard Queue es solo para aplicaciones internas; FIFO Queue puede recibir mensajes de internet",
-        "Standard Queue retiene mensajes 4 días; FIFO Queue los retiene indefinidamente hasta ser procesados"
+        "Amazon SNS",
+        "Amazon SQS",
+        "Amazon EC2",
+        "Amazon RDS"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Standard Queue ofrece rendimiento máximo (casi ilimitado de transacciones por segundo) pero con entrega at-least-once (puede haber duplicados) y sin garantía de orden. FIFO Queue garantiza que los mensajes se procesan exactamente en el orden en que se enviaron y exactamente una vez, con un límite de 3,000 mensajes por segundo (o 300 sin batching)."
+      "explicacion": "SNS permite enviar notificaciones a múltiples endpoints como email, Lambda o HTTP."
     },
     {
       "id": 8,
-      "pregunta": "¿Qué es el visibility timeout en Amazon SQS y para qué sirve?",
+      "pregunta": "Una aplicación necesita procesar tareas de forma asincrónica usando colas de mensajes. ¿Qué servicio es más adecuado?",
       "opciones": [
-        "Un período durante el cual un mensaje recibido por un consumidor se oculta de otros consumidores para evitar procesamiento duplicado",
-        "El tiempo máximo que un mensaje puede permanecer en la cola antes de ser eliminado automáticamente",
-        "El tiempo que SQS espera antes de notificar al productor que el mensaje fue recibido exitosamente",
-        "Un período de gracia que SQS otorga para que los consumidores se conecten antes de descartar mensajes"
+        "Amazon SQS",
+        "Amazon SNS",
+        "Amazon CloudFront",
+        "AWS Shield"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "El visibility timeout es el período (por defecto 30 segundos, máximo 12 horas) durante el cual un mensaje recibido por un consumidor se hace invisible para otros consumidores. Si el consumidor procesa el mensaje exitosamente y lo elimina, el mensaje desaparece. Si el consumidor falla, cuando expira el visibility timeout el mensaje vuelve a ser visible para que otro consumidor lo procese."
+      "explicacion": "Amazon SQS permite almacenar mensajes en colas y procesarlos posteriormente."
     },
     {
       "id": 9,
-      "pregunta": "¿Qué es una Dead-Letter Queue (DLQ) en Amazon SQS y cuándo se usa?",
+      "pregunta": "¿Qué servicio permite integrar APIs con funciones serverless como AWS Lambda?",
       "opciones": [
-        "Una cola que recibe mensajes que no pudieron ser procesados exitosamente después de un número máximo de intentos, para análisis y resolución de errores",
-        "Una cola de alta prioridad donde se envían los mensajes más urgentes para procesamiento inmediato",
-        "Una cola de respaldo que almacena copias de todos los mensajes en caso de fallo del sistema principal",
-        "Una cola especial para mensajes de errores generados por los consumidores durante el procesamiento"
+        "Amazon API Gateway",
+        "Amazon CloudWatch",
+        "Amazon Route 53",
+        "AWS KMS"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Una Dead-Letter Queue es una cola especial de SQS a la que se envían automáticamente los mensajes que no pudieron ser procesados exitosamente después de un número máximo de intentos configurado (maxReceiveCount). Permite aislar los mensajes problemáticos para análisis, depuración y reprocesamiento sin interrumpir el flujo normal de mensajes."
+      "explicacion": "API Gateway puede integrarse directamente con AWS Lambda para crear APIs serverless."
     },
     {
       "id": 10,
-      "pregunta": "¿Qué es Long Polling en Amazon SQS y qué ventaja ofrece sobre Short Polling?",
+      "pregunta": "¿Qué servicio permite responder automáticamente a eventos generados por servicios AWS?",
       "opciones": [
-        "Long Polling espera hasta que haya mensajes disponibles o expire el tiempo de espera, reduciendo llamadas API vacías y costos; Short Polling retorna inmediatamente aunque no haya mensajes",
-        "Long Polling procesa múltiples mensajes simultáneamente; Short Polling procesa un mensaje a la vez",
-        "Long Polling retiene mensajes por más tiempo en la cola; Short Polling los elimina inmediatamente",
-        "Long Polling es para colas FIFO; Short Polling solo funciona con colas Standard"
+        "Amazon EventBridge",
+        "Amazon S3",
+        "Amazon EBS",
+        "Amazon EC2"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Short Polling consulta SQS y retorna inmediatamente, incluso si la cola está vacía, generando muchas llamadas API costosas e innecesarias. Long Polling (WaitTimeSeconds entre 1-20 segundos) espera hasta que haya al menos un mensaje disponible o expire el tiempo de espera, reduciendo significativamente el número de llamadas API vacías y por tanto los costos y la carga de procesamiento."
+      "explicacion": "Amazon EventBridge permite crear reglas que reaccionan a eventos y desencadenan acciones."
     }
   ]
 }
