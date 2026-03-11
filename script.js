@@ -5,6 +5,7 @@
 
 // Mapeo de archivo JSON por categoría
 const CATEGORY_FILES = {
+  'aws-general':            'questions/aws-general.json',
   'computo':                'questions/computo.json',
   'almacenamiento':         'questions/almacenamiento.json',
   'base-datos':             'questions/base-datos.json',
@@ -210,6 +211,7 @@ function getCategoryLabel(mode, category) {
   if (mode === 'exam') return '🎯 Examen';
   if (mode === 'practical') return '🛠️ Casos Prácticos';
   const labels = {
+    'aws-general':            '📋 AWS General',
     'computo':                '💻 Cómputo',
     'almacenamiento':         '🗄️ Almacenamiento',
     'base-datos':             '🛢️ Base de Datos',

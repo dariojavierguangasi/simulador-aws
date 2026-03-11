@@ -1,0 +1,1956 @@
+{
+    "certificacion": "AWS Certified Cloud Practitioner CLF-C02",
+    "totalPreguntas": 150,
+    "preguntas": [
+        {
+            "id": 1,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué modelo de servicio cloud proporciona infraestructura virtual como servidores y almacenamiento?",
+            "opciones": [
+                "IaaS",
+                "SaaS",
+                "PaaS",
+                "FaaS"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Infrastructure as a Service proporciona recursos de infraestructura como servidores, almacenamiento y redes."
+        },
+        {
+            "id": 2,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué describe mejor la elasticidad en la nube?",
+            "opciones": [
+                "La capacidad de aumentar o reducir recursos automáticamente según la demanda",
+                "La capacidad de ejecutar aplicaciones en contenedores",
+                "La capacidad de usar hardware dedicado",
+                "La capacidad de crear usuarios"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Elasticidad permite escalar recursos automáticamente dependiendo de la carga de trabajo."
+        },
+        {
+            "id": 3,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué componente de AWS representa una ubicación geográfica?",
+            "opciones": [
+                "Region",
+                "Availability Zone",
+                "Edge Location",
+                "Subnet"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Una región es una ubicación geográfica que contiene múltiples Availability Zones."
+        },
+        {
+            "id": 4,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué es una Availability Zone?",
+            "opciones": [
+                "Un datacenter aislado dentro de una región",
+                "Una red privada virtual",
+                "Un tipo de base de datos",
+                "Un balanceador"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Una Availability Zone es un datacenter independiente dentro de una región AWS."
+        },
+        {
+            "id": 5,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué significa escalabilidad en la nube?",
+            "opciones": [
+                "La capacidad de aumentar recursos para soportar más carga",
+                "La capacidad de eliminar instancias",
+                "La capacidad de migrar bases de datos",
+                "La capacidad de cifrar datos"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Escalabilidad permite aumentar o disminuir capacidad según las necesidades."
+        },
+        {
+            "id": 6,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio permite gestionar usuarios y permisos en AWS?",
+            "opciones": [
+                "AWS IAM",
+                "AWS Shield",
+                "AWS WAF",
+                "AWS GuardDuty"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "IAM permite administrar identidades, usuarios, roles y políticas."
+        },
+        {
+            "id": 7,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué práctica recomienda AWS para otorgar permisos?",
+            "opciones": [
+                "Principio de privilegio mínimo",
+                "Acceso completo para todos",
+                "Usar usuario root siempre",
+                "Compartir credenciales"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "El principio de privilegio mínimo otorga solo los permisos necesarios."
+        },
+        {
+            "id": 8,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite ejecutar máquinas virtuales en AWS?",
+            "opciones": [
+                "Amazon EC2",
+                "Amazon S3",
+                "AWS Lambda",
+                "Amazon DynamoDB"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon EC2 proporciona servidores virtuales en la nube."
+        },
+        {
+            "id": 9,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio de AWS permite almacenar objetos?",
+            "opciones": [
+                "Amazon S3",
+                "Amazon RDS",
+                "Amazon EC2",
+                "Amazon SNS"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon S3 es el servicio de almacenamiento de objetos de AWS."
+        },
+        {
+            "id": 10,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite ejecutar código sin administrar servidores?",
+            "opciones": [
+                "AWS Lambda",
+                "Amazon EC2",
+                "Amazon ECS",
+                "Amazon EKS"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Lambda permite ejecutar código serverless basado en eventos."
+        },
+        {
+            "id": 11,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio es una base de datos relacional administrada?",
+            "opciones": [
+                "Amazon RDS",
+                "Amazon S3",
+                "Amazon SNS",
+                "Amazon SQS"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon RDS proporciona bases de datos relacionales administradas."
+        },
+        {
+            "id": 12,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio NoSQL administrado ofrece latencia de milisegundos?",
+            "opciones": [
+                "Amazon DynamoDB",
+                "Amazon Aurora",
+                "Amazon Redshift",
+                "Amazon Neptune"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "DynamoDB es una base de datos NoSQL altamente escalable."
+        },
+        {
+            "id": 13,
+            "categoria": "redes",
+            "pregunta": "¿Qué servicio permite crear una red privada en AWS?",
+            "opciones": [
+                "Amazon VPC",
+                "Amazon Route53",
+                "Amazon CloudFront",
+                "AWS Shield"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon VPC permite crear redes virtuales aisladas."
+        },
+        {
+            "id": 14,
+            "categoria": "redes",
+            "pregunta": "¿Qué servicio de AWS funciona como DNS?",
+            "opciones": [
+                "Amazon Route 53",
+                "Amazon CloudFront",
+                "AWS Shield",
+                "AWS WAF"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Route 53 es el servicio DNS administrado de AWS."
+        },
+        {
+            "id": 15,
+            "categoria": "redes",
+            "pregunta": "¿Qué servicio distribuye contenido globalmente con baja latencia?",
+            "opciones": [
+                "Amazon CloudFront",
+                "Amazon EC2",
+                "Amazon S3",
+                "AWS Lambda"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CloudFront es la CDN de AWS."
+        },
+        {
+            "id": 16,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio protege aplicaciones contra ataques DDoS?",
+            "opciones": [
+                "AWS Shield",
+                "AWS WAF",
+                "AWS IAM",
+                "Amazon GuardDuty"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Shield protege aplicaciones contra ataques de denegación de servicio distribuido."
+        },
+        {
+            "id": 17,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio permite filtrar tráfico HTTP malicioso hacia aplicaciones web?",
+            "opciones": [
+                "AWS WAF",
+                "AWS Shield",
+                "Amazon Inspector",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS WAF protege aplicaciones web filtrando tráfico HTTP y bloqueando ataques comunes."
+        },
+        {
+            "id": 18,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio detecta comportamientos sospechosos usando machine learning?",
+            "opciones": [
+                "Amazon GuardDuty",
+                "AWS WAF",
+                "AWS Shield",
+                "Amazon Inspector"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "GuardDuty analiza logs y tráfico para detectar amenazas potenciales."
+        },
+        {
+            "id": 19,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué mecanismo agrega una capa adicional de seguridad al iniciar sesión?",
+            "opciones": [
+                "MFA",
+                "IAM Policy",
+                "Security Group",
+                "Subnet"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Multi Factor Authentication requiere un segundo factor para autenticar usuarios."
+        },
+        {
+            "id": 20,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite ejecutar contenedores sin administrar servidores?",
+            "opciones": [
+                "AWS Fargate",
+                "Amazon EC2",
+                "Amazon S3",
+                "Amazon DynamoDB"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Fargate permite ejecutar contenedores sin administrar infraestructura."
+        },
+        {
+            "id": 21,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio administra clusters Kubernetes en AWS?",
+            "opciones": [
+                "Amazon EKS",
+                "Amazon ECS",
+                "Amazon EC2",
+                "AWS Lambda"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon Elastic Kubernetes Service permite ejecutar Kubernetes administrado."
+        },
+        {
+            "id": 22,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite almacenamiento de bloques para EC2?",
+            "opciones": [
+                "Amazon EBS",
+                "Amazon S3",
+                "Amazon EFS",
+                "Amazon Glacier"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "EBS proporciona almacenamiento de bloques persistente para instancias EC2."
+        },
+        {
+            "id": 23,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite almacenamiento de archivos compartidos?",
+            "opciones": [
+                "Amazon EFS",
+                "Amazon EBS",
+                "Amazon S3",
+                "Amazon DynamoDB"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon EFS es un sistema de archivos escalable para instancias EC2."
+        },
+        {
+            "id": 24,
+            "categoria": "costos",
+            "pregunta": "¿Qué modelo de precios permite pagar solo por lo que se usa?",
+            "opciones": [
+                "Pay as you go",
+                "Reserved pricing",
+                "Spot pricing",
+                "Dedicated pricing"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "El modelo pay-as-you-go permite pagar únicamente por los recursos consumidos."
+        },
+        {
+            "id": 25,
+            "categoria": "costos",
+            "pregunta": "¿Qué instancias ofrecen grandes descuentos usando capacidad no utilizada?",
+            "opciones": [
+                "Spot Instances",
+                "On-Demand Instances",
+                "Reserved Instances",
+                "Dedicated Instances"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Spot Instances usan capacidad no utilizada de AWS con descuentos significativos."
+        },
+        {
+            "id": 26,
+            "categoria": "costos",
+            "pregunta": "¿Qué instancias ofrecen descuento a cambio de compromiso a largo plazo?",
+            "opciones": [
+                "Reserved Instances",
+                "On-Demand Instances",
+                "Spot Instances",
+                "Free Tier"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Reserved Instances ofrecen descuentos si se compromete a usar capacidad por 1 o 3 años."
+        },
+        {
+            "id": 27,
+            "categoria": "costos",
+            "pregunta": "¿Qué programa permite usar algunos servicios gratuitamente?",
+            "opciones": [
+                "AWS Free Tier",
+                "AWS Trial",
+                "AWS Budget Plan",
+                "AWS Sandbox"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Free Tier permite usar algunos servicios gratis dentro de ciertos límites."
+        },
+        {
+            "id": 28,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué significa TCO en la nube?",
+            "opciones": [
+                "Total Cost of Ownership",
+                "Total Cloud Operation",
+                "Technical Cloud Optimization",
+                "Total Cost Option"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "TCO compara el costo total de infraestructura on-premise con cloud."
+        },
+        {
+            "id": 29,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué ventaja ofrece la nube frente a infraestructura tradicional?",
+            "opciones": [
+                "Convertir CAPEX en OPEX",
+                "Eliminar costos",
+                "Hardware dedicado",
+                "Licencias permanentes"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "La nube permite pasar de gastos de capital a gastos operativos."
+        },
+        {
+            "id": 30,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite enviar notificaciones a múltiples suscriptores?",
+            "opciones": [
+                "Amazon SNS",
+                "Amazon SQS",
+                "Amazon EC2",
+                "Amazon RDS"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "SNS utiliza el modelo publish-subscribe para enviar mensajes a múltiples endpoints."
+        },
+        {
+            "id": 31,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite desacoplar aplicaciones mediante colas de mensajes?",
+            "opciones": [
+                "Amazon SQS",
+                "Amazon SNS",
+                "Amazon EC2",
+                "Amazon RDS"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon SQS permite desacoplar componentes de aplicaciones mediante colas de mensajes."
+        },
+        {
+            "id": 32,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite crear APIs para aplicaciones web o móviles?",
+            "opciones": [
+                "Amazon API Gateway",
+                "Amazon CloudFront",
+                "Amazon Route 53",
+                "Amazon EC2"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon API Gateway permite crear y administrar APIs que se integran con otros servicios."
+        },
+        {
+            "id": 33,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite automatizar flujos de trabajo entre servicios AWS?",
+            "opciones": [
+                "AWS Step Functions",
+                "Amazon SNS",
+                "Amazon SQS",
+                "Amazon EC2"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Step Functions permite orquestar múltiples servicios AWS mediante flujos de trabajo."
+        },
+        {
+            "id": 34,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite reaccionar automáticamente a eventos en AWS?",
+            "opciones": [
+                "Amazon EventBridge",
+                "Amazon S3",
+                "Amazon DynamoDB",
+                "Amazon EC2"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "EventBridge permite crear arquitecturas basadas en eventos."
+        },
+        {
+            "id": 35,
+            "categoria": "redes",
+            "pregunta": "¿Qué componente de red controla el tráfico entrante y saliente a instancias EC2?",
+            "opciones": [
+                "Security Groups",
+                "Route Tables",
+                "Internet Gateway",
+                "NAT Gateway"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Security Groups actúan como firewall virtual para instancias EC2."
+        },
+        {
+            "id": 36,
+            "categoria": "redes",
+            "pregunta": "¿Qué servicio permite conectar redes on-premise con AWS mediante una conexión dedicada?",
+            "opciones": [
+                "AWS Direct Connect",
+                "Amazon VPC",
+                "AWS VPN",
+                "Amazon Route53"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Direct Connect permite conexión dedicada entre infraestructura local y AWS."
+        },
+        {
+            "id": 37,
+            "categoria": "redes",
+            "pregunta": "¿Qué componente permite que recursos en una VPC accedan a internet?",
+            "opciones": [
+                "Internet Gateway",
+                "Security Group",
+                "Subnet",
+                "Route Table"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Internet Gateway permite comunicación entre la VPC e internet."
+        },
+        {
+            "id": 38,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio registra llamadas a la API en una cuenta AWS?",
+            "opciones": [
+                "AWS CloudTrail",
+                "Amazon CloudWatch",
+                "AWS Config",
+                "Amazon Inspector"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CloudTrail registra todas las llamadas a la API realizadas en la cuenta."
+        },
+        {
+            "id": 39,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio monitorea métricas y logs de recursos AWS?",
+            "opciones": [
+                "Amazon CloudWatch",
+                "AWS CloudTrail",
+                "AWS Config",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CloudWatch recopila métricas, logs y eventos para monitoreo."
+        },
+        {
+            "id": 40,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio permite analizar configuraciones de recursos para cumplimiento?",
+            "opciones": [
+                "AWS Config",
+                "AWS Shield",
+                "AWS WAF",
+                "Amazon GuardDuty"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Config monitorea configuraciones y evalúa cumplimiento."
+        },
+        {
+            "id": 41,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué significa alta disponibilidad en arquitectura cloud?",
+            "opciones": [
+                "Diseñar sistemas que continúen funcionando incluso si un componente falla",
+                "Usar una sola instancia EC2",
+                "Usar almacenamiento local",
+                "Evitar redundancia"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Alta disponibilidad implica resiliencia mediante redundancia y múltiples zonas."
+        },
+        {
+            "id": 42,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué significa tolerancia a fallos?",
+            "opciones": [
+                "La capacidad de continuar operando ante fallos",
+                "La capacidad de eliminar datos",
+                "La capacidad de reducir costos",
+                "La capacidad de crear usuarios"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Los sistemas tolerantes a fallos siguen funcionando aun cuando fallan componentes."
+        },
+        {
+            "id": 43,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite desplegar aplicaciones rápidamente sin administrar infraestructura?",
+            "opciones": [
+                "AWS Elastic Beanstalk",
+                "Amazon EC2",
+                "Amazon S3",
+                "Amazon VPC"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Elastic Beanstalk automatiza el despliegue y escalado de aplicaciones."
+        },
+        {
+            "id": 44,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio de AWS permite realizar análisis de grandes volúmenes de datos?",
+            "opciones": [
+                "Amazon Redshift",
+                "Amazon RDS",
+                "Amazon DynamoDB",
+                "Amazon S3"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Redshift es un data warehouse para análisis de grandes volúmenes de datos."
+        },
+        {
+            "id": 45,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite consultar datos en S3 usando SQL?",
+            "opciones": [
+                "Amazon Athena",
+                "Amazon Redshift",
+                "Amazon RDS",
+                "AWS Lambda"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Athena permite consultar datos almacenados en S3 usando SQL sin servidores."
+        },
+        {
+            "id": 46,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio de AWS permite almacenar archivos en un sistema de archivos compartido y escalable?",
+            "opciones": [
+                "Amazon EFS",
+                "Amazon EBS",
+                "Amazon S3",
+                "Amazon DynamoDB"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon EFS proporciona almacenamiento de archivos escalable accesible desde múltiples instancias EC2."
+        },
+        {
+            "id": 47,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio de AWS proporciona almacenamiento de bloques para instancias EC2?",
+            "opciones": [
+                "Amazon EBS",
+                "Amazon S3",
+                "Amazon EFS",
+                "Amazon Glacier"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon EBS proporciona almacenamiento persistente de bloques para instancias EC2."
+        },
+        {
+            "id": 48,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio de almacenamiento es ideal para backups y archivado a largo plazo con bajo costo?",
+            "opciones": [
+                "Amazon S3 Glacier",
+                "Amazon EBS",
+                "Amazon EFS",
+                "Amazon DynamoDB"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon S3 Glacier ofrece almacenamiento de muy bajo costo para datos archivados."
+        },
+        {
+            "id": 49,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio permite gestionar claves de cifrado en AWS?",
+            "opciones": [
+                "AWS KMS",
+                "AWS IAM",
+                "AWS WAF",
+                "AWS Shield"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Key Management Service permite crear y administrar claves de cifrado."
+        },
+        {
+            "id": 50,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio permite autenticar usuarios en aplicaciones web o móviles?",
+            "opciones": [
+                "Amazon Cognito",
+                "AWS IAM",
+                "AWS Organizations",
+                "Amazon EC2"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon Cognito permite autenticación y gestión de usuarios para aplicaciones."
+        },
+        {
+            "id": 51,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio permite evaluar vulnerabilidades en instancias EC2?",
+            "opciones": [
+                "Amazon Inspector",
+                "AWS Shield",
+                "AWS WAF",
+                "Amazon GuardDuty"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon Inspector analiza vulnerabilidades y exposición en cargas de trabajo."
+        },
+        {
+            "id": 52,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio proporciona recomendaciones para optimizar costos y seguridad?",
+            "opciones": [
+                "AWS Trusted Advisor",
+                "AWS Config",
+                "Amazon CloudWatch",
+                "AWS CloudTrail"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Trusted Advisor proporciona recomendaciones sobre costos, seguridad y rendimiento."
+        },
+        {
+            "id": 53,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio permite administrar múltiples cuentas AWS de forma centralizada?",
+            "opciones": [
+                "AWS Organizations",
+                "AWS IAM",
+                "Amazon EC2",
+                "Amazon VPC"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Organizations permite administrar múltiples cuentas AWS y aplicar políticas."
+        },
+        {
+            "id": 54,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio permite definir infraestructura mediante código?",
+            "opciones": [
+                "AWS CloudFormation",
+                "Amazon EC2",
+                "Amazon VPC",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CloudFormation permite desplegar infraestructura usando plantillas."
+        },
+        {
+            "id": 55,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio permite automatizar operaciones en instancias EC2?",
+            "opciones": [
+                "AWS Systems Manager",
+                "Amazon S3",
+                "Amazon DynamoDB",
+                "AWS Lambda"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Systems Manager permite administrar instancias y automatizar tareas operativas."
+        },
+        {
+            "id": 56,
+            "categoria": "costos",
+            "pregunta": "¿Qué herramienta permite visualizar tendencias de gasto en AWS?",
+            "opciones": [
+                "AWS Cost Explorer",
+                "AWS Budgets",
+                "AWS Pricing Calculator",
+                "AWS Config"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Cost Explorer permite analizar gastos y tendencias de uso."
+        },
+        {
+            "id": 57,
+            "categoria": "costos",
+            "pregunta": "¿Qué herramienta permite crear alertas cuando se supera un presupuesto?",
+            "opciones": [
+                "AWS Budgets",
+                "AWS Cost Explorer",
+                "AWS Trusted Advisor",
+                "AWS Lambda"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Budgets permite crear alertas de gasto o uso."
+        },
+        {
+            "id": 58,
+            "categoria": "costos",
+            "pregunta": "¿Qué herramienta ayuda a estimar costos antes de implementar arquitectura?",
+            "opciones": [
+                "AWS Pricing Calculator",
+                "AWS Cost Explorer",
+                "AWS Budgets",
+                "AWS Config"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Pricing Calculator permite estimar costos antes de desplegar infraestructura."
+        },
+        {
+            "id": 59,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué describe mejor el término 'serverless'?",
+            "opciones": [
+                "Ejecutar código sin administrar servidores",
+                "Ejecutar código solo en servidores físicos",
+                "Ejecutar código solo en contenedores",
+                "Ejecutar código en hardware dedicado"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Serverless permite ejecutar código sin gestionar infraestructura."
+        },
+        {
+            "id": 60,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué pilar del AWS Well Architected Framework se enfoca en optimizar gastos?",
+            "opciones": [
+                "Cost Optimization",
+                "Security",
+                "Reliability",
+                "Performance Efficiency"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "El pilar Cost Optimization busca reducir costos manteniendo eficiencia."
+        },
+        {
+            "id": 61,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite balancear tráfico entre múltiples instancias EC2?",
+            "opciones": [
+                "Elastic Load Balancing",
+                "Amazon Route 53",
+                "Amazon CloudFront",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Elastic Load Balancing distribuye tráfico entre múltiples recursos para mejorar disponibilidad."
+        },
+        {
+            "id": 62,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite escalar automáticamente instancias EC2 según la demanda?",
+            "opciones": [
+                "Auto Scaling",
+                "Elastic Load Balancing",
+                "AWS Lambda",
+                "Amazon S3"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Auto Scaling permite aumentar o reducir automáticamente instancias según carga."
+        },
+        {
+            "id": 63,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite ejecutar contenedores Docker administrados por AWS?",
+            "opciones": [
+                "Amazon ECS",
+                "Amazon EC2",
+                "Amazon RDS",
+                "Amazon S3"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon ECS permite ejecutar y administrar contenedores."
+        },
+        {
+            "id": 64,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite almacenar datos estructurados en formato relacional altamente compatible con MySQL y PostgreSQL?",
+            "opciones": [
+                "Amazon Aurora",
+                "Amazon DynamoDB",
+                "Amazon Redshift",
+                "Amazon Neptune"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon Aurora es una base de datos relacional compatible con MySQL y PostgreSQL."
+        },
+        {
+            "id": 65,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite análisis de big data usando clusters administrados de Hadoop?",
+            "opciones": [
+                "Amazon EMR",
+                "Amazon Athena",
+                "Amazon Redshift",
+                "AWS Glue"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon EMR permite ejecutar frameworks como Hadoop y Spark."
+        },
+        {
+            "id": 66,
+            "categoria": "redes",
+            "pregunta": "¿Qué componente permite que instancias privadas accedan a internet sin ser públicas?",
+            "opciones": [
+                "NAT Gateway",
+                "Internet Gateway",
+                "Security Group",
+                "Route Table"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "NAT Gateway permite que instancias privadas accedan a internet saliente."
+        },
+        {
+            "id": 67,
+            "categoria": "redes",
+            "pregunta": "¿Qué componente define cómo se enruta el tráfico dentro de una VPC?",
+            "opciones": [
+                "Route Table",
+                "Security Group",
+                "Internet Gateway",
+                "Subnet"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Las Route Tables determinan cómo se enruta el tráfico dentro de la VPC."
+        },
+        {
+            "id": 68,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio proporciona informes de cumplimiento y auditoría de AWS?",
+            "opciones": [
+                "AWS Artifact",
+                "AWS Config",
+                "Amazon GuardDuty",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Artifact proporciona acceso a reportes de cumplimiento."
+        },
+        {
+            "id": 69,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio ayuda a detectar configuraciones inseguras en recursos AWS?",
+            "opciones": [
+                "AWS Config",
+                "AWS IAM",
+                "AWS Shield",
+                "AWS Lambda"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Config evalúa configuraciones de recursos y cumplimiento."
+        },
+        {
+            "id": 70,
+            "categoria": "costos",
+            "pregunta": "¿Qué modelo de precio permite pagar por capacidad reservada durante 1 o 3 años?",
+            "opciones": [
+                "Reserved Instances",
+                "Spot Instances",
+                "On Demand",
+                "Savings Plans Free"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Reserved Instances ofrecen descuento por compromiso a largo plazo."
+        },
+        {
+            "id": 71,
+            "categoria": "costos",
+            "pregunta": "¿Qué modelo de precio usa capacidad no utilizada con descuentos muy altos?",
+            "opciones": [
+                "Spot Instances",
+                "Reserved Instances",
+                "On Demand",
+                "Dedicated Hosts"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Spot Instances permiten usar capacidad no utilizada con grandes descuentos."
+        },
+        {
+            "id": 72,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué ventaja clave ofrece la elasticidad en cloud computing?",
+            "opciones": [
+                "Ajustar capacidad automáticamente según demanda",
+                "Eliminar completamente costos",
+                "Evitar monitoreo",
+                "Eliminar seguridad"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Elasticidad permite ajustar recursos según la demanda."
+        },
+        {
+            "id": 73,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué describe mejor el modelo SaaS?",
+            "opciones": [
+                "Aplicaciones completas accesibles vía internet",
+                "Infraestructura virtual",
+                "Plataforma de desarrollo",
+                "Servicios de almacenamiento"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Software as a Service proporciona aplicaciones completas."
+        },
+        {
+            "id": 74,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué describe mejor el modelo PaaS?",
+            "opciones": [
+                "Plataforma para desarrollar y desplegar aplicaciones",
+                "Infraestructura física",
+                "Almacenamiento de archivos",
+                "Redes privadas"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "PaaS proporciona plataforma para desarrollo de aplicaciones."
+        },
+        {
+            "id": 75,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué beneficio clave ofrece la nube pública?",
+            "opciones": [
+                "Escalabilidad bajo demanda",
+                "Hardware dedicado obligatorio",
+                "Costos fijos",
+                "Sin acceso remoto"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "La nube pública permite escalar recursos bajo demanda."
+        },
+        {
+            "id": 76,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite analizar grandes volúmenes de datos usando SQL en S3?",
+            "opciones": [
+                "Amazon Athena",
+                "Amazon EMR",
+                "Amazon Redshift",
+                "AWS Glue"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon Athena permite consultar datos almacenados en S3 utilizando SQL."
+        },
+        {
+            "id": 77,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite integrar, limpiar y preparar datos para análisis?",
+            "opciones": [
+                "AWS Glue",
+                "Amazon EMR",
+                "Amazon Athena",
+                "Amazon RDS"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Glue es un servicio ETL para preparar datos para análisis."
+        },
+        {
+            "id": 78,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite construir dashboards interactivos para análisis de datos?",
+            "opciones": [
+                "Amazon QuickSight",
+                "Amazon Athena",
+                "AWS Glue",
+                "Amazon EMR"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon QuickSight permite crear dashboards interactivos para análisis."
+        },
+        {
+            "id": 79,
+            "categoria": "redes",
+            "pregunta": "¿Qué servicio mejora la entrega de contenido usando ubicaciones edge?",
+            "opciones": [
+                "Amazon CloudFront",
+                "Amazon Route 53",
+                "AWS Direct Connect",
+                "Amazon VPC"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CloudFront distribuye contenido usando una red global de edge locations."
+        },
+        {
+            "id": 80,
+            "categoria": "redes",
+            "pregunta": "¿Qué componente divide una VPC en segmentos lógicos?",
+            "opciones": [
+                "Subnets",
+                "Route Tables",
+                "Security Groups",
+                "Internet Gateway"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Las subnets dividen la VPC en segmentos de red."
+        },
+        {
+            "id": 81,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio proporciona cifrado de datos usando claves administradas?",
+            "opciones": [
+                "AWS KMS",
+                "AWS IAM",
+                "AWS WAF",
+                "AWS Shield"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS KMS permite crear y administrar claves de cifrado."
+        },
+        {
+            "id": 82,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio permite autenticación para aplicaciones web y móviles?",
+            "opciones": [
+                "Amazon Cognito",
+                "AWS IAM",
+                "AWS Organizations",
+                "AWS Config"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon Cognito proporciona autenticación y gestión de usuarios."
+        },
+        {
+            "id": 83,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué práctica recomienda AWS para proteger la cuenta root?",
+            "opciones": [
+                "Habilitar MFA",
+                "Compartir credenciales",
+                "Usarla diariamente",
+                "Eliminar políticas"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS recomienda habilitar MFA para proteger la cuenta root."
+        },
+        {
+            "id": 84,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio permite monitorear métricas de CPU de instancias EC2?",
+            "opciones": [
+                "Amazon CloudWatch",
+                "AWS CloudTrail",
+                "AWS Config",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CloudWatch recopila métricas y logs de recursos AWS."
+        },
+        {
+            "id": 85,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio registra llamadas API realizadas en una cuenta AWS?",
+            "opciones": [
+                "AWS CloudTrail",
+                "Amazon CloudWatch",
+                "AWS Config",
+                "AWS Trusted Advisor"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CloudTrail registra llamadas a la API para auditoría."
+        },
+        {
+            "id": 86,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio permite revisar recomendaciones de costos y seguridad?",
+            "opciones": [
+                "AWS Trusted Advisor",
+                "AWS Config",
+                "Amazon CloudWatch",
+                "AWS Lambda"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Trusted Advisor ofrece recomendaciones de buenas prácticas."
+        },
+        {
+            "id": 87,
+            "categoria": "costos",
+            "pregunta": "¿Qué concepto describe comparar costos cloud vs on-premise?",
+            "opciones": [
+                "Total Cost of Ownership",
+                "Elasticity",
+                "Scalability",
+                "High Availability"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "TCO compara costos de infraestructura tradicional frente a cloud."
+        },
+        {
+            "id": 88,
+            "categoria": "costos",
+            "pregunta": "¿Qué modelo de costos permite pagar solo cuando se usan recursos?",
+            "opciones": [
+                "On-Demand",
+                "Reserved",
+                "Spot",
+                "Dedicated"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "On-Demand permite pagar solo por el uso real."
+        },
+        {
+            "id": 89,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué pilar del Well Architected Framework se enfoca en disponibilidad del sistema?",
+            "opciones": [
+                "Reliability",
+                "Security",
+                "Cost Optimization",
+                "Sustainability"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "El pilar Reliability se enfoca en mantener el sistema disponible."
+        },
+        {
+            "id": 90,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué pilar del Well Architected Framework se enfoca en eficiencia del rendimiento?",
+            "opciones": [
+                "Performance Efficiency",
+                "Security",
+                "Cost Optimization",
+                "Reliability"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Performance Efficiency optimiza recursos y rendimiento."
+        },
+        {
+            "id": 91,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite almacenamiento altamente duradero con 11 nueves de durabilidad?",
+            "opciones": [
+                "Amazon S3",
+                "Amazon EBS",
+                "Amazon EFS",
+                "Amazon DynamoDB"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon S3 ofrece 99.999999999% de durabilidad para objetos almacenados."
+        },
+        {
+            "id": 92,
+            "categoria": "servicios",
+            "pregunta": "¿Qué clase de almacenamiento S3 es ideal para datos de acceso frecuente?",
+            "opciones": [
+                "S3 Standard",
+                "S3 Glacier",
+                "S3 Glacier Deep Archive",
+                "S3 One Zone IA"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "S3 Standard está optimizado para acceso frecuente con baja latencia."
+        },
+        {
+            "id": 93,
+            "categoria": "servicios",
+            "pregunta": "¿Qué clase de almacenamiento S3 es ideal para archivado de muy largo plazo?",
+            "opciones": [
+                "S3 Glacier Deep Archive",
+                "S3 Standard",
+                "S3 One Zone",
+                "S3 Intelligent Tiering"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Glacier Deep Archive ofrece almacenamiento de muy bajo costo para archivado."
+        },
+        {
+            "id": 94,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite bases de datos altamente escalables NoSQL?",
+            "opciones": [
+                "Amazon DynamoDB",
+                "Amazon Aurora",
+                "Amazon RDS",
+                "Amazon Redshift"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "DynamoDB es una base de datos NoSQL completamente administrada."
+        },
+        {
+            "id": 95,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite ejecutar consultas analíticas en un data warehouse?",
+            "opciones": [
+                "Amazon Redshift",
+                "Amazon RDS",
+                "Amazon DynamoDB",
+                "Amazon Aurora"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Redshift es un data warehouse diseñado para análisis de grandes volúmenes."
+        },
+        {
+            "id": 96,
+            "categoria": "redes",
+            "pregunta": "¿Qué servicio DNS altamente disponible ofrece AWS?",
+            "opciones": [
+                "Amazon Route 53",
+                "Amazon CloudFront",
+                "AWS Direct Connect",
+                "AWS Lambda"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Route 53 es el servicio DNS altamente disponible y escalable de AWS."
+        },
+        {
+            "id": 97,
+            "categoria": "redes",
+            "pregunta": "¿Qué servicio permite conexiones seguras entre VPC y redes on-premise?",
+            "opciones": [
+                "AWS VPN",
+                "Amazon Route 53",
+                "AWS Lambda",
+                "Amazon S3"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS VPN permite conectar redes locales con AWS de forma segura."
+        },
+        {
+            "id": 98,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio permite detectar amenazas analizando logs de VPC y DNS?",
+            "opciones": [
+                "Amazon GuardDuty",
+                "AWS IAM",
+                "AWS WAF",
+                "AWS Shield"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "GuardDuty detecta amenazas mediante análisis de logs y machine learning."
+        },
+        {
+            "id": 99,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué práctica recomienda AWS para controlar acceso a recursos?",
+            "opciones": [
+                "Principio de privilegio mínimo",
+                "Acceso administrador para todos",
+                "Compartir credenciales",
+                "Deshabilitar logs"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "El principio de privilegio mínimo limita permisos solo a lo necesario."
+        },
+        {
+            "id": 100,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio permite administrar infraestructura como código usando plantillas?",
+            "opciones": [
+                "AWS CloudFormation",
+                "Amazon EC2",
+                "AWS IAM",
+                "Amazon VPC"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CloudFormation permite crear y gestionar infraestructura mediante plantillas."
+        },
+        {
+            "id": 101,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio permite automatizar flujos CI/CD para aplicaciones?",
+            "opciones": [
+                "AWS CodePipeline",
+                "Amazon EC2",
+                "Amazon DynamoDB",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CodePipeline automatiza pipelines de integración y despliegue continuo."
+        },
+        {
+            "id": 102,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio permite desplegar aplicaciones automáticamente en EC2?",
+            "opciones": [
+                "AWS CodeDeploy",
+                "AWS Lambda",
+                "Amazon S3",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CodeDeploy automatiza el despliegue de aplicaciones."
+        },
+        {
+            "id": 103,
+            "categoria": "costos",
+            "pregunta": "¿Qué herramienta permite analizar el gasto histórico en AWS?",
+            "opciones": [
+                "AWS Cost Explorer",
+                "AWS Budgets",
+                "AWS Pricing Calculator",
+                "AWS CloudTrail"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Cost Explorer permite analizar tendencias y uso de servicios."
+        },
+        {
+            "id": 104,
+            "categoria": "costos",
+            "pregunta": "¿Qué herramienta permite configurar alertas cuando el gasto excede un presupuesto?",
+            "opciones": [
+                "AWS Budgets",
+                "AWS Cost Explorer",
+                "AWS Config",
+                "AWS Lambda"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Budgets permite configurar alertas de gasto."
+        },
+        {
+            "id": 105,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué beneficio principal ofrece la computación en la nube?",
+            "opciones": [
+                "Escalar recursos bajo demanda",
+                "Eliminar la necesidad de seguridad",
+                "Eliminar monitoreo",
+                "Eliminar redes"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "La nube permite escalar recursos según las necesidades."
+        },
+        {
+            "id": 106,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué característica de la nube permite ajustar recursos automáticamente según demanda?",
+            "opciones": [
+                "Elasticidad",
+                "Durabilidad",
+                "Latencia",
+                "Persistencia"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "La elasticidad permite aumentar o reducir recursos según la demanda."
+        },
+        {
+            "id": 107,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué característica describe la capacidad de un sistema de crecer para soportar más carga?",
+            "opciones": [
+                "Escalabilidad",
+                "Durabilidad",
+                "Elasticidad",
+                "Disponibilidad"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "La escalabilidad permite aumentar la capacidad de un sistema."
+        },
+        {
+            "id": 108,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite ejecutar código en respuesta a eventos sin administrar servidores?",
+            "opciones": [
+                "AWS Lambda",
+                "Amazon EC2",
+                "Amazon ECS",
+                "AWS Fargate"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Lambda permite ejecutar funciones serverless."
+        },
+        {
+            "id": 109,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite ejecutar contenedores sin administrar servidores?",
+            "opciones": [
+                "AWS Fargate",
+                "Amazon EC2",
+                "Amazon S3",
+                "AWS Lambda"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Fargate permite ejecutar contenedores sin gestionar infraestructura."
+        },
+        {
+            "id": 110,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite desplegar aplicaciones web rápidamente?",
+            "opciones": [
+                "AWS Elastic Beanstalk",
+                "Amazon EC2",
+                "AWS Lambda",
+                "Amazon ECS"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Elastic Beanstalk automatiza el despliegue y escalado de aplicaciones."
+        },
+        {
+            "id": 111,
+            "categoria": "redes",
+            "pregunta": "¿Qué componente conecta una VPC con internet?",
+            "opciones": [
+                "Internet Gateway",
+                "Security Group",
+                "Route Table",
+                "Subnet"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Internet Gateway permite que una VPC se comunique con internet."
+        },
+        {
+            "id": 112,
+            "categoria": "redes",
+            "pregunta": "¿Qué componente actúa como firewall virtual para instancias EC2?",
+            "opciones": [
+                "Security Groups",
+                "Route Tables",
+                "Internet Gateway",
+                "Subnets"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Security Groups controlan tráfico entrante y saliente."
+        },
+        {
+            "id": 113,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio permite almacenar secretos de forma segura?",
+            "opciones": [
+                "AWS Secrets Manager",
+                "AWS IAM",
+                "AWS WAF",
+                "AWS Shield"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Secrets Manager permite almacenar credenciales y secretos."
+        },
+        {
+            "id": 114,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio permite administrar claves de cifrado?",
+            "opciones": [
+                "AWS KMS",
+                "AWS IAM",
+                "Amazon GuardDuty",
+                "AWS Shield"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS KMS administra claves de cifrado."
+        },
+        {
+            "id": 115,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio permite administrar parches en instancias EC2?",
+            "opciones": [
+                "AWS Systems Manager",
+                "AWS Lambda",
+                "Amazon CloudWatch",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Systems Manager permite gestionar parches y mantenimiento."
+        },
+        {
+            "id": 116,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio permite crear dashboards para monitoreo?",
+            "opciones": [
+                "Amazon CloudWatch",
+                "AWS CloudTrail",
+                "AWS Config",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CloudWatch permite monitorear métricas y logs."
+        },
+        {
+            "id": 117,
+            "categoria": "costos",
+            "pregunta": "¿Qué modelo de precios permite pagar solo por el uso?",
+            "opciones": [
+                "On Demand",
+                "Reserved",
+                "Spot",
+                "Dedicated"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "On Demand cobra solo por uso real."
+        },
+        {
+            "id": 118,
+            "categoria": "costos",
+            "pregunta": "¿Qué herramienta permite estimar costos de arquitectura?",
+            "opciones": [
+                "AWS Pricing Calculator",
+                "AWS Budgets",
+                "AWS Cost Explorer",
+                "AWS Config"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Pricing Calculator permite estimar costos antes de desplegar."
+        },
+        {
+            "id": 119,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué pilar del Well Architected Framework protege sistemas?",
+            "opciones": [
+                "Security",
+                "Cost Optimization",
+                "Reliability",
+                "Performance Efficiency"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Security protege sistemas, datos e identidades."
+        },
+        {
+            "id": 120,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué pilar del Well Architected Framework mantiene sistemas disponibles?",
+            "opciones": [
+                "Reliability",
+                "Security",
+                "Cost Optimization",
+                "Sustainability"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Reliability se enfoca en disponibilidad y resiliencia."
+        },
+        {
+            "id": 121,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué ventaja principal ofrece el modelo cloud frente a infraestructura tradicional?",
+            "opciones": [
+                "Pago por uso",
+                "Hardware dedicado obligatorio",
+                "Capacidad fija",
+                "Licencias permanentes"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "La nube permite pagar solo por los recursos que se utilizan."
+        },
+        {
+            "id": 122,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué significa CAPEX en el contexto de TI?",
+            "opciones": [
+                "Gastos de capital en infraestructura",
+                "Costos operativos mensuales",
+                "Costos de almacenamiento",
+                "Costos de red"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CAPEX representa inversiones iniciales en hardware e infraestructura."
+        },
+        {
+            "id": 123,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué significa OPEX en computación en la nube?",
+            "opciones": [
+                "Gastos operativos pagados según uso",
+                "Gastos de capital",
+                "Costos de red",
+                "Costos de mantenimiento físico"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "OPEX representa gastos operativos que se pagan según consumo."
+        },
+        {
+            "id": 124,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio AWS permite almacenar archivos como objetos?",
+            "opciones": [
+                "Amazon S3",
+                "Amazon EBS",
+                "Amazon EFS",
+                "Amazon DynamoDB"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon S3 es almacenamiento de objetos altamente duradero."
+        },
+        {
+            "id": 125,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio proporciona almacenamiento de bloques para EC2?",
+            "opciones": [
+                "Amazon EBS",
+                "Amazon S3",
+                "Amazon Glacier",
+                "Amazon Athena"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "EBS es almacenamiento de bloques persistente para instancias EC2."
+        },
+        {
+            "id": 126,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite almacenamiento de archivos compartidos escalables?",
+            "opciones": [
+                "Amazon EFS",
+                "Amazon EBS",
+                "Amazon S3",
+                "Amazon DynamoDB"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon EFS proporciona un sistema de archivos escalable."
+        },
+        {
+            "id": 127,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio permite ejecutar servidores virtuales?",
+            "opciones": [
+                "Amazon EC2",
+                "AWS Lambda",
+                "Amazon ECS",
+                "AWS Fargate"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon EC2 proporciona instancias de servidores virtuales."
+        },
+        {
+            "id": 128,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio ejecuta código sin administrar servidores?",
+            "opciones": [
+                "AWS Lambda",
+                "Amazon EC2",
+                "Amazon RDS",
+                "Amazon S3"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Lambda permite ejecutar funciones serverless."
+        },
+        {
+            "id": 129,
+            "categoria": "servicios",
+            "pregunta": "¿Qué servicio ofrece base de datos relacional administrada?",
+            "opciones": [
+                "Amazon RDS",
+                "Amazon DynamoDB",
+                "Amazon Redshift",
+                "Amazon Neptune"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon RDS administra bases de datos relacionales."
+        },
+        {
+            "id": 130,
+            "categoria": "servicios",
+            "pregunta": "¿Qué base de datos NoSQL ofrece AWS?",
+            "opciones": [
+                "Amazon DynamoDB",
+                "Amazon Aurora",
+                "Amazon RDS",
+                "Amazon Redshift"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "DynamoDB es una base de datos NoSQL administrada."
+        },
+        {
+            "id": 131,
+            "categoria": "redes",
+            "pregunta": "¿Qué servicio DNS altamente disponible ofrece AWS?",
+            "opciones": [
+                "Amazon Route 53",
+                "Amazon CloudFront",
+                "AWS Lambda",
+                "AWS Shield"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon Route 53 es el servicio DNS escalable y altamente disponible de AWS."
+        },
+        {
+            "id": 132,
+            "categoria": "redes",
+            "pregunta": "¿Qué servicio distribuye contenido globalmente con baja latencia?",
+            "opciones": [
+                "Amazon CloudFront",
+                "Amazon EC2",
+                "Amazon S3",
+                "Amazon DynamoDB"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon CloudFront es la red de distribución de contenido (CDN) de AWS."
+        },
+        {
+            "id": 133,
+            "categoria": "redes",
+            "pregunta": "¿Qué servicio permite crear redes privadas virtuales en AWS?",
+            "opciones": [
+                "Amazon VPC",
+                "Amazon Route 53",
+                "Amazon CloudFront",
+                "AWS Lambda"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon VPC permite crear redes virtuales aisladas dentro de AWS."
+        },
+        {
+            "id": 134,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio administra identidades y permisos en AWS?",
+            "opciones": [
+                "AWS IAM",
+                "AWS Shield",
+                "AWS WAF",
+                "Amazon GuardDuty"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS IAM permite gestionar usuarios, roles y políticas."
+        },
+        {
+            "id": 135,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio protege aplicaciones contra ataques DDoS?",
+            "opciones": [
+                "AWS Shield",
+                "AWS WAF",
+                "AWS IAM",
+                "Amazon GuardDuty"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Shield proporciona protección contra ataques de denegación de servicio distribuido."
+        },
+        {
+            "id": 136,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio filtra tráfico HTTP malicioso hacia aplicaciones web?",
+            "opciones": [
+                "AWS WAF",
+                "AWS Shield",
+                "AWS IAM",
+                "Amazon Inspector"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS WAF protege aplicaciones web filtrando tráfico HTTP malicioso."
+        },
+        {
+            "id": 137,
+            "categoria": "seguridad",
+            "pregunta": "¿Qué servicio detecta actividades sospechosas mediante análisis de logs?",
+            "opciones": [
+                "Amazon GuardDuty",
+                "AWS WAF",
+                "AWS IAM",
+                "AWS Shield"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Amazon GuardDuty usa machine learning para detectar amenazas."
+        },
+        {
+            "id": 138,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio monitorea métricas y logs de recursos AWS?",
+            "opciones": [
+                "Amazon CloudWatch",
+                "AWS CloudTrail",
+                "AWS Config",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CloudWatch recopila métricas, logs y permite crear alarmas."
+        },
+        {
+            "id": 139,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio registra llamadas a la API en una cuenta AWS?",
+            "opciones": [
+                "AWS CloudTrail",
+                "Amazon CloudWatch",
+                "AWS Config",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "CloudTrail registra todas las llamadas API realizadas en una cuenta AWS."
+        },
+        {
+            "id": 140,
+            "categoria": "administracion",
+            "pregunta": "¿Qué servicio monitorea configuraciones de recursos para cumplimiento?",
+            "opciones": [
+                "AWS Config",
+                "AWS CloudTrail",
+                "Amazon CloudWatch",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Config evalúa configuraciones de recursos y cumplimiento."
+        },
+        {
+            "id": 141,
+            "categoria": "costos",
+            "pregunta": "¿Qué herramienta permite analizar el gasto histórico en AWS?",
+            "opciones": [
+                "AWS Cost Explorer",
+                "AWS Budgets",
+                "AWS Pricing Calculator",
+                "AWS Config"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Cost Explorer permite visualizar y analizar el gasto histórico y tendencias."
+        },
+        {
+            "id": 142,
+            "categoria": "costos",
+            "pregunta": "¿Qué herramienta permite crear alertas cuando el gasto excede un presupuesto?",
+            "opciones": [
+                "AWS Budgets",
+                "AWS Cost Explorer",
+                "AWS Pricing Calculator",
+                "AWS IAM"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Budgets permite definir presupuestos y recibir alertas cuando se superan."
+        },
+        {
+            "id": 143,
+            "categoria": "costos",
+            "pregunta": "¿Qué herramienta permite estimar costos antes de desplegar recursos?",
+            "opciones": [
+                "AWS Pricing Calculator",
+                "AWS Budgets",
+                "AWS Cost Explorer",
+                "AWS CloudTrail"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "AWS Pricing Calculator permite estimar costos de arquitectura antes de implementarla."
+        },
+        {
+            "id": 144,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué significa TCO en el contexto de AWS?",
+            "opciones": [
+                "Total Cost of Ownership",
+                "Total Cloud Operation",
+                "Technical Cloud Option",
+                "Total Cost Output"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "TCO permite comparar el costo total entre infraestructura local y cloud."
+        },
+        {
+            "id": 145,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué pilar del AWS Well-Architected Framework se enfoca en reducir costos?",
+            "opciones": [
+                "Cost Optimization",
+                "Security",
+                "Reliability",
+                "Performance Efficiency"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Cost Optimization busca minimizar costos manteniendo eficiencia."
+        },
+        {
+            "id": 146,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué pilar del AWS Well-Architected Framework se enfoca en proteger sistemas y datos?",
+            "opciones": [
+                "Security",
+                "Cost Optimization",
+                "Reliability",
+                "Sustainability"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Security se enfoca en proteger sistemas, datos e identidades."
+        },
+        {
+            "id": 147,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué pilar del AWS Well-Architected Framework mejora la eficiencia del rendimiento?",
+            "opciones": [
+                "Performance Efficiency",
+                "Security",
+                "Cost Optimization",
+                "Reliability"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Performance Efficiency optimiza recursos y rendimiento."
+        },
+        {
+            "id": 148,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué pilar del AWS Well-Architected Framework se enfoca en alta disponibilidad?",
+            "opciones": [
+                "Reliability",
+                "Security",
+                "Cost Optimization",
+                "Performance Efficiency"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "Reliability se enfoca en resiliencia y recuperación ante fallos."
+        },
+        {
+            "id": 149,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué ventaja principal ofrece la nube pública?",
+            "opciones": [
+                "Escalabilidad bajo demanda",
+                "Hardware dedicado obligatorio",
+                "Costos fijos",
+                "Sin acceso remoto"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "La nube pública permite escalar recursos automáticamente según demanda."
+        },
+        {
+            "id": 150,
+            "categoria": "conceptos",
+            "pregunta": "¿Qué característica permite pagar solo por los recursos utilizados?",
+            "opciones": [
+                "Pay as you go",
+                "Reserved pricing",
+                "Dedicated infrastructure",
+                "Static capacity"
+            ],
+            "respuestaCorrecta": 0,
+            "explicacion": "El modelo Pay-as-you-go permite pagar únicamente por el consumo real."
+        }
+    ]
+}
